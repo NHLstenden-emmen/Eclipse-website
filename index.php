@@ -3,7 +3,7 @@
     // change the example.env.php to .env.php
     try {
         if (!file_exists(".env.php")) {
-            throw new Exception("Env file was not found");
+            throw new Exception("There is a file missing");
         }
         $env = include '.env.php';
     } catch(Exception $e) {
