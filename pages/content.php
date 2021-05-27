@@ -20,7 +20,7 @@
 						return;
 				}
 			} else {
-				include 'unauthorized.php';
+				include '404.php';
 			}
 		}
 	} 
@@ -29,6 +29,15 @@
 		case 'eclipse-website':
 		case 'home':
 			include 'guest/home.php';
+			break;
+		case 'mirrorSpecs':
+			include 'guest/mirrorSpecs.php';
+			break;
+		case 'widgets':
+			include 'guest/widgets.php';
+			break;
+		case 'setup':
+			include 'guest/setup.php';
 			break;
 		case 'login':
 			include 'auth/login.php';

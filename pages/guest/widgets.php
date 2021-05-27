@@ -1,4 +1,4 @@
-<div id='mainLayout' class="home">
+<div id='mainLayout' class="widgets">
 	<div id="home">
 		home
 	</div>

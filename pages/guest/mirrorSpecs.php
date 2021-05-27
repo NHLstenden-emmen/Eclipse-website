@@ -1,4 +1,4 @@
-<div id='mainLayout' class="home">
+<div id='mainLayout' class="mirrorSpecs">
 	<div id="home">
 		home
 	</div>
