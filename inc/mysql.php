@@ -7,7 +7,7 @@
 		private $host;
 		private $user;
 		private $pass;
-		private $db;
+		private $table;
 		private $conn;
 	
 		public function __construct() {
@@ -30,7 +30,7 @@
 			$this->conn = @mysqli_connect($this->host,$this->user,$this->pass, $this->table);
             if(!$this->conn)
             {
-                DIE("could not connect". mysqli_connect_error($this->conn));
+                die("could not connect to the database");
             }
 		}
 		
