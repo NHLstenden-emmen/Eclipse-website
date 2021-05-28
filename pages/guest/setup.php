@@ -1,3 +1,4 @@
+<?php include "inc/theWave.php"; ?>
 <div id='mainLayout' class="setup">
 	<div id="home">
 		<a href="home" id="homeLink">
@@ -18,6 +19,6 @@
 		</a>
 	</div>
 	<div id="setup">
-		setup
+		<?php include "inc/navbar.php"; ?>
 	</div>
 </div>

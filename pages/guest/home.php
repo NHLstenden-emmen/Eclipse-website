@@ -1,6 +1,7 @@
+<?php include "inc/theWave.php"; ?>
 <div id='mainLayout' class="home">
 	<div id="home">
-		home
+		<?php include "inc/navbar.php"; ?>
 	</div>
 	<div id="mirrorSpecs">
 		<a href="mirrorspecs" id="mirrorSpecsLink">

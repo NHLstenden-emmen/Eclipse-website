@@ -25,7 +25,10 @@
 		{
 			case 'Eclipse':
 			case 'home':
-				echo '<link rel="stylesheet" href="css/guest/home.css">';
+			case 'mirrorspecs':
+			case 'widgets':
+			case 'setup':
+				echo '<link rel="stylesheet" href="css/pages/guest.css">';
 				break;
 		}
 		?> 
