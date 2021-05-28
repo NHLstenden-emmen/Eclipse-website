@@ -98,11 +98,11 @@
 }
 
 .wave {
-	width: 2500px;
-    height: 2500px;
+    width: 2900px;
+    height: 3100px;
     position: absolute;
-    top: -2200px;
-    left: -600px;
+    top: -2400px;
+    left: -800px;
     border-radius: 42%;
     background: var(--primary);
     animation: wave 40s infinite linear;
@@ -139,4 +139,15 @@ nav a{
     padding-left: 20px;
     padding-right: 20px;
     text-decoration: none;
+}
+
+.primaryContent,
+.secondContent{
+	width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: calc(50vh - 50px);
+}
+.secondContent{
+    background-color: white;
 }

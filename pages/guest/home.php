@@ -2,6 +2,12 @@
 <div id='mainLayout' class="home">
 	<div id="home">
 		<?php include "inc/navbar.php"; ?>
+		<div class="primaryContent">
+			main content
+		</div>
+		<div class="secondContent">
+			secondary content
+		</div>
 	</div>
 	<div id="mirrorSpecs">
 		<a href="mirrorspecs" id="mirrorSpecsLink">
