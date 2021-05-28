@@ -30,7 +30,7 @@
 		case 'home':
 			include 'guest/home.php';
 			break;
-		case 'mirrorSpecs':
+		case 'mirrorspecs':
 			include 'guest/mirrorSpecs.php';
 			break;
 		case 'widgets':

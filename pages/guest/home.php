@@ -3,12 +3,18 @@
 		home
 	</div>
 	<div id="mirrorSpecs">
-		mirror specs
+		<a href="mirrorspecs" id="mirrorSpecsLink">
+			<p>mirror specs</p>
+		</a>
 	</div>
 	<div id="widgets">
-		widgets
+		<a href="widgets" id="widgetsLink">
+			<p>widgets</p>
+		</a>
 	</div>
 	<div id="setup">
-		setup
+		<a href="setup" id="setupLink">
+			<p>setup</p>
+		</a>
 	</div>
 </div>

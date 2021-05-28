@@ -14,34 +14,68 @@
 	--white: #ffffff;
 }
 
-#mainLayout{
+#mainLayout {
 	display: grid;
 	width: 100%;
 	height: 100vh;
 	grid-template-areas: "home mirrorSpecs widgets setup";
 }
 
-#mainLayout.home{
+#mainLayout.home {
 	grid-template-columns: 85% 5% 5% 5%;
 }
-#mainLayout.mirrorSpecs{
+#mainLayout.mirrorSpecs {
 	grid-template-columns: 5% 85% 5% 5%;
 }
-#mainLayout.widgets{
+#mainLayout.widgets {
 	grid-template-columns: 5% 5% 85% 5%;
 }
-#mainLayout.setup{
+#mainLayout.setup {
 	grid-template-columns: 5% 5% 5% 85%;
 }
-#mainLayout #home{
+#mainLayout #home {
 	grid-area: home;
 }
-#mainLayout #mirrorSpecs{
+#mainLayout #mirrorSpecs {
 	grid-area: mirrorSpecs;
 }
-#mainLayout #widgets{
+#mainLayout #widgets {
 	grid-area: widgets;
 }
-#mainLayout #setup{
+#mainLayout #setup {
 	grid-area: setup;
+}
+
+#mainLayout #homeLink,
+#mainLayout #mirrorSpecsLink,
+#mainLayout #widgetsLink,
+#mainLayout #setupLink {
+    justify-content: center;
+    display: flex;
+    height: 100%;
+}
+#mainLayout #homeLink p,
+#mainLayout #mirrorSpecsLink p,
+#mainLayout #widgetsLink p,
+#mainLayout #setupLink p{
+    writing-mode: vertical-lr;
+
+	transform: rotate(180deg);
+
+	/* Legacy vendor prefixes that you probably don't need... */
+
+	/* Safari */
+	-webkit-transform: rotate(180deg);
+
+	/* Firefox */
+	-moz-transform: rotate(180deg);
+
+	/* IE */
+	-ms-transform: rotate(180deg);
+
+	/* Opera */
+	-o-transform: rotate(180deg);
+
+	/* Internet Explorer */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 }

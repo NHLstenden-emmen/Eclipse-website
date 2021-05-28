@@ -1,14 +1,20 @@
 <div id='mainLayout' class="mirrorSpecs">
 	<div id="home">
-		home
+		<a href="home" id="homeLink">
+			<p>home</p>
+		</a>
 	</div>
 	<div id="mirrorSpecs">
-		mirror specs
+		mirrorSpecs
 	</div>
 	<div id="widgets">
-		widgets
+		<a href="widgets" id="widgetsLink">
+			<p>widgets</p>
+		</a>
 	</div>
 	<div id="setup">
-		setup
+		<a href="setup" id="setupLink">
+			<p>setup</p>
+		</a>
 	</div>
 </div>
