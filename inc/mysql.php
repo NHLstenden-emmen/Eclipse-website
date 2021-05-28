@@ -41,7 +41,7 @@
 			$email = htmlspecialchars($email);
 
 			// this gets all the users and returns them
-			if ($stmt = $this->conn->prepare("SELECT `user_id`, `auth` FROM `users` WHERE `user_id` = ? AND `name` = ? AND `email` = ?")) {
+			if ($stmt = $this->conn->prepare("SELECT `user_id`, `email`, `name`, `auth` FROM `users` WHERE `user_id` = ? AND `name` = ? AND `email` = ?")) {
 				$stmt->bind_param("sss", $user_id, $name, $email);
 				$stmt->execute();
 				$result = $stmt->get_result();
@@ -52,6 +52,21 @@
 			else{ 
 				return mysqli_error($this->conn);
 			}
+		}
+
+		public function getTheUserPasswordForLogin($email){
+
+			$email = htmlspecialchars($email);
+
+			if ($stmt = $this->conn->prepare("SELECT * FROM users WHERE email = ?")) {
+				$stmt->bind_param("s", $email);
+				$stmt->execute();
+				$result = $stmt->get_result();
+				$stmt->free_result();
+				$stmt->close();
+				return $result;
+			}
+			return NULL;
 		}
 	}
 ?>
