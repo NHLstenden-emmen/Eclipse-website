@@ -90,33 +90,6 @@
 	height: 100%;
 }
 
-.wrapper {
-    width: 100%;
-    height: 100%;
-	position: absolute;
-	overflow: hidden;
-}
-
-.wave {
-    width: 2900px;
-    height: 3100px;
-    position: absolute;
-    top: -2400px;
-    left: -800px;
-    border-radius: 42%;
-    background: var(--primary);
-    animation: wave 40s infinite linear;
-}
-
-@keyframes wave {
-	from {
-		transform: rotate(0deg);
-	}
-	from {
-		transform: rotate(360deg);
-	}
-}
-
 nav{    
 	display: flex;
     justify-content: space-between;
@@ -146,8 +119,76 @@ nav a{
 	width: 80%;
     margin-left: auto;
     margin-right: auto;
-    height: calc(50vh - 50px);
+    height: calc(50vh - 36px);
+}
+.primaryContent{
+	color: white;
+	grid-template-areas: 
+            "textBlock imgBlock";
+	grid-template-columns: 50% 50%;
+	display: grid;
+}
+.primaryContent .textBlock{
+	grid-area: textBlock;
+    padding-top: 5%;
+}
+.primaryContent .imgBlock{
+	grid-area: imgBlock;
+}
+.primaryContent .imgBlock img{
+    max-width: 100%;
+    max-height: calc(100% - 36px);
 }
 .secondContent{
     background-color: white;
+	-webkit-box-shadow: 0 8px 6px -6px #ccc;
+	-moz-box-shadow: 0 8px 6px -6px #ccc;
+	box-shadow: 0px 0px 18px 8px #ccc;
+	grid-template-areas: 
+            "information1 information2 information3";
+	grid-template-columns: 33% 34% 33%;
+	display: grid;
+	min-height: 400px;
+}
+.secondContent .information1{
+	grid-area: information1;
+	text-align: center;
+	
+}
+.secondContent .information2{
+	grid-area: information2;
+	text-align: center;
+}
+.secondContent .information3{
+	grid-area: information3;
+	text-align: center;
+}
+
+.secondContent .information1,
+.secondContent .information2,
+.secondContent .information3{
+	grid-template-areas: 
+            "logo"
+			"tekst";
+	grid-template-rows: 40% 60%;
+	grid-template-columns: 100%;
+	display: grid;
+}
+
+.secondContent .information1 .logo,
+.secondContent .information2 .logo,
+.secondContent .information3 .logo{
+	grid-area: logo;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 7em;
+}
+.secondContent .information1 .tekst,
+.secondContent .information2 .tekst,
+.secondContent .information3 .tekst{
+	grid-area: tekst;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.4em;
 }

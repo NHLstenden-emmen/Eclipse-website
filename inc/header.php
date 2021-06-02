@@ -26,6 +26,7 @@
 		<!-- style sheet -->
 		<link rel="stylesheet" href="css/main/main.css">
 		<link rel="stylesheet" href="css/pages/404.css">
+		<link rel="stylesheet" href="css/pages/wave.css">
 		<?php
 		// add css to the page
 		switch(strtolower($pagePath))
