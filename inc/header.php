@@ -32,6 +32,7 @@
 		switch(strtolower($pagePath))
 		{
 			case 'eclipse-website':
+			case '':
 			case 'home':
 			case 'mirrorspecs':
 			case 'widgets':

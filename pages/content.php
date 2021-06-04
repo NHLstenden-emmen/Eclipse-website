@@ -27,6 +27,7 @@
 	switch(strtolower($pagePath)) 
 	{ //everything is in lowercase so the cases must also be in lowercase
 		case 'eclipse-website':
+		case '';
 		case 'home':
 			include 'guest/home.php';
 			break;
