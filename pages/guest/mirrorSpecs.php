@@ -10,7 +10,7 @@
 		<?php include "inc/navbar.php"; ?>
 		<div class="primaryContent">
 			<div class="textBlock">
-				<h1>Uitleg over wat de mirror is</h1>
+				<h1>Beschrijving van wat voor hardware er word gebruikt</h1>
 				<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit eu magna id vehicula. Ut ac rhoncus lacus. Integer non ultrices ante. </h5>
 			</div>
 			<div class="imgBlock">

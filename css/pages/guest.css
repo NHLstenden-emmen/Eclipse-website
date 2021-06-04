@@ -102,7 +102,7 @@ nav img{
     height: 50px;
 }
 
-nav a{
+nav p a{
 	color: var(--white);
     border: 1px solid var(--secondary);
     background-color: var(--secondary);
@@ -137,7 +137,7 @@ nav a{
 }
 .primaryContent .imgBlock img{
     max-width: 100%;
-    max-height: calc(100% - 36px);
+    max-height: calc(50vh - 38px);
 }
 .secondContent{
     background-color: white;

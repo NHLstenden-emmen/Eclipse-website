@@ -1,3 +1,4 @@
+<?php include "inc/theWave.php"; ?>
 <?php
     $error = "";
     if (isset($_POST['email']) && isset($_POST['password'])) {
@@ -50,6 +51,9 @@
 
 <div class="loginPagina background">
     <div class="loginbox">
+        <a href="home">
+	        <img src="images/logo/bigLogo.png" alt="Eclipse Logo">
+        </a>
         <form method="POST">
             <input value="<?php if(isset($_COOKIE["member_login"])) { echo $_COOKIE["member_login"]; } ?>" type="text" name="email" placeholder="email" required>
             <input type="password" name="password" placeholder="password" required>
@@ -57,12 +61,9 @@
             <label class="check">
                 <input type="checkbox" name="remember" id="remember"
                 <?php if(isset($_COOKIE["member_login"])) { ?> checked 
-                <?php } ?> />Remember password
+                <?php } ?> />Remember email
             </label><br>
             <button class="inloggen" type="submit">Login</button><br>
-            <div class="vergeten">
-                <a href="https://passwordreset.microsoftonline.com/?whr=nhlstenden.com" target=”_blank” class="vergeten-tekst">forgot your password? </a>
-            </div>
         </form> 
     </div>
 </div>

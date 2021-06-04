@@ -38,6 +38,9 @@
 			case 'setup':
 				echo '<link rel="stylesheet" href="css/pages/guest.css">';
 				break;
+			case 'login':
+				echo '<link rel="stylesheet" href="css/pages/login.css">';
+				break;
 		}
 		?> 
     </head>

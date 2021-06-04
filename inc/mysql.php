@@ -66,7 +66,10 @@
 				$stmt->close();
 				return $result;
 			}
-			return NULL;
+			
+			else{ 
+				return mysqli_error($this->conn);
+			}
 		}
 	}
 ?>

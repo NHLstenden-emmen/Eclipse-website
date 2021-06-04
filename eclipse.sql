@@ -24,32 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `user`
+-- Tabelstructuur voor tabel `users`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_520_nopad_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_520_nopad_ci NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_520_nopad_ci NOT NULL,
-  `auth` tinyint(10) NOT NULL
+  `auth` varchar(10) COLLATE utf8mb4_unicode_520_nopad_ci NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_nopad_ci;
 
 --
--- Gegevens worden geëxporteerd voor tabel `user`
+-- Gegevens worden geëxporteerd voor tabel `users`
 --
 
-INSERT INTO `user` (`user_id`, `email`, `password`, `name`, `auth`) VALUES
-(1, 'test@test.com', 'password', 'test', 1);
+INSERT INTO `users` (`user_id`, `email`, `password`, `name`, `auth`) VALUES
+(1, 'test@test.com', 'password', 'test', 'admin');
 
 --
 -- Indexen voor geëxporteerde tabellen
 --
 
 --
--- Indexen voor tabel `user`
+-- Indexen voor tabel `users`
 --
-ALTER TABLE `user`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
 --
@@ -57,9 +57,9 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT voor een tabel `user`
+-- AUTO_INCREMENT voor een tabel `users`
 --
-ALTER TABLE `user`
+ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
