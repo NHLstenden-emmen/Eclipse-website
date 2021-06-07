@@ -1,6 +1,6 @@
 <nav>
 	<a href="/">
-		<img src="images/logo/bigLogo.png" alt="Eclipse Logo">
+		<img src="img/logo/bigLogo.png" alt="Eclipse Logo">
 	</a>
 	@auth
 		Logged in!

@@ -1,0 +1,194 @@
+
+#mainLayout {
+	display: grid;
+	width: 100%;
+    position: absolute;
+	height: 100vh;
+	grid-template-areas: "home mirrorSpecs widgets setup";
+}
+
+#mainLayout.home {
+	grid-template-columns: 85% 5% 5% 5%;
+}
+#mainLayout.mirrorSpecs {
+	grid-template-columns: 5% 85% 5% 5%;
+}
+#mainLayout.widgets {
+	grid-template-columns: 5% 5% 85% 5%;
+}
+#mainLayout.setup {
+	grid-template-columns: 5% 5% 5% 85%;
+}
+#mainLayout #home {
+	grid-area: home;
+}
+#mainLayout #mirrorSpecs {
+	grid-area: mirrorSpecs;
+}
+#mainLayout #widgets {
+	grid-area: widgets;
+}
+#mainLayout #setup {
+	grid-area: setup;
+}
+#mainLayout #homeLink,
+#mainLayout #mirrorSpecsLink,
+#mainLayout #widgetsLink,
+#mainLayout #setupLink {
+	text-decoration: none;
+	position: relative;
+	justify-content: center;
+	display: flex;
+	height: 100%;
+
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#mainLayout #homeLink {
+	background-image: url("../../img/guestImages/home.jpg");
+}
+#mainLayout #mirrorSpecsLink {
+	background-image: url("../../img/guestImages/mirrorSpecs.jpg");
+}
+#mainLayout #widgetsLink {
+	background-image: url("../../img/guestImages/widgets.jpg");
+}
+#mainLayout #setupLink {
+	background-image: url("../../img/guestImages/setup.jpg");
+}
+#mainLayout #homeLink p,
+#mainLayout #mirrorSpecsLink p,
+#mainLayout #widgetsLink p,
+#mainLayout #setupLink p {
+	color: var(--white);
+	writing-mode: vertical-lr;
+	transform: rotate(180deg);
+	/* Safari */
+	-webkit-transform: rotate(180deg);
+	/* Firefox */
+	-moz-transform: rotate(180deg);
+	/* IE */
+	-ms-transform: rotate(180deg);
+	/* Opera */
+	-o-transform: rotate(180deg);
+	/* Internet Explorer */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+#mainLayout #homeLink .darkLayer,
+#mainLayout #mirrorSpecsLink .darkLayer,
+#mainLayout #widgetsLink .darkLayer,
+#mainLayout #setupLink .darkLayer {
+	background-color: rgb(0 0 0 / 50%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+nav{    
+	display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+nav img{
+    height: 50px;
+}
+
+nav p a{
+	color: var(--white);
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
+    box-shadow: 0 0 5px -1px rgb(0 0 0 / 20%);
+    padding: 5px;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.primaryContent,
+.secondContent{
+	width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: calc(50vh - 36px);
+}
+.primaryContent{
+	color: white;
+	grid-template-areas: 
+            "textBlock imgBlock";
+	grid-template-columns: 50% 50%;
+	display: grid;
+}
+.primaryContent .textBlock{
+	grid-area: textBlock;
+    padding-top: 5%;
+}
+.primaryContent .imgBlock{
+	grid-area: imgBlock;
+}
+.primaryContent .imgBlock img{
+    max-width: 100%;
+    max-height: calc(50vh - 38px);
+}
+.secondContent{
+    background-color: white;
+	-webkit-box-shadow: 0 8px 6px -6px #ccc;
+	-moz-box-shadow: 0 8px 6px -6px #ccc;
+	box-shadow: 0px 0px 18px 8px #ccc;
+	grid-template-areas: 
+            "information1 information2 information3";
+	grid-template-columns: 33% 34% 33%;
+	display: grid;
+	min-height: 400px;
+}
+.secondContent .information1{
+	grid-area: information1;
+	text-align: center;
+	
+}
+.secondContent .information2{
+	grid-area: information2;
+	text-align: center;
+}
+.secondContent .information3{
+	grid-area: information3;
+	text-align: center;
+}
+
+.secondContent .information1,
+.secondContent .information2,
+.secondContent .information3{
+	grid-template-areas: 
+            "logo"
+			"tekst";
+	grid-template-rows: 40% 60%;
+	grid-template-columns: 100%;
+	display: grid;
+}
+
+.secondContent .information1 .logo,
+.secondContent .information2 .logo,
+.secondContent .information3 .logo{
+	grid-area: logo;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 7em;
+}
+.secondContent .information1 .tekst,
+.secondContent .information2 .tekst,
+.secondContent .information3 .tekst{
+	grid-area: tekst;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.4em;
+}
