@@ -1,7 +1,8 @@
 <?php
 
-use App\Models\Widgets;
 use App\Http\Controllers\WidgetsApiController;
+use App\Http\Controllers\UserSettingsApiController;
+use App\Http\Controllers\MirrorsApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,5 @@ Route::delete('/widgets/{widget}', [WidgetsApiController::class, 'destroy']);
 Route::get('/user_settings', [UserSettingsApiController::class, 'index']);
 Route::put('/user_settings/{setting}', [UserSettingsApiController::class, 'update']);
 
-Route::get('/mirror', [MirrorApiController::class, 'index']);  
+Route::get('/mirrors', [MirrorsApiController::class, 'index']);
+Route::put('/mirrors/{setting}', [MirrorsApiController::class, 'update']);

@@ -2,24 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\user_settings;
+use App\Models\Mirrors;
 use Illuminate\Http\Request;
 
-class UserSettingsApiController extends Controller
+class MirrorsApiController extends Controller
 {
     public function index()
     {
-        return user_settings::all();
+        return Mirrors::all();
     }
     
-    public function update(user_settings $user_setting)
+    public function update(Mirrors $mirror)
     {
         request()->validate([
             'type' => 'required',
             'params' => 'required',
         ]);
 
-        $success = $user_setting->update([
+        $success = $mirror->update([
             'type' => request('type'),
             'params' => request('params'),
         ]);

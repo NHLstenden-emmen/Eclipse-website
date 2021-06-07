@@ -21,7 +21,7 @@ class UserSettings extends Migration
             $table->timestamps();
 
             $table->foreign('widget_id')->references('id')->on('widgets');
-            $table->foreign('mirror_id')->references('id')->on('mirror');
+            $table->foreign('mirror_id')->references('id')->on('mirrors');
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

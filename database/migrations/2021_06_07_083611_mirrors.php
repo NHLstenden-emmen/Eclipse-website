@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Mirror extends Migration
+class Mirrors extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Mirror extends Migration
      */
     public function up()
     {
-        Schema::create('mirror', function (Blueprint $table) {
+        Schema::create('mirrors', function (Blueprint $table) {
             $table->id('id');
             $table->unsignedBigInteger('user_id');
             $table->string('name');
@@ -31,6 +31,6 @@ class Mirror extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mirror');
+        Schema::dropIfExists('mirrors');
     }
 }

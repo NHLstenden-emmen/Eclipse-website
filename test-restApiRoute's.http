@@ -1,8 +1,13 @@
 GET http://eclipse/api/widgets HTTP/1.1
 
+###
+GET http://eclipse/api/user_settings HTTP/1.1
 
 ###
+GET http://eclipse/api/mirrors HTTP/1.1
 
+###
+###
 
 POST http://eclipse/api/widgets HTTP/1.1
 Content-Type: application/json
@@ -13,6 +18,7 @@ Content-Type: application/json
 }
 
 ###
+###
 
 PUT http://eclipse/api/widgets/3 HTTP/1.1
 Content-Type: application/json
@@ -22,6 +28,28 @@ Content-Type: application/json
 	"params": "params updated"
 }
 
+###
+
+PUT http://eclipse/api/user_settings/3 HTTP/1.1
+Content-Type: application/json
+
+{
+	"type": "type updated",
+	"params": "params updated"
+}
+
+
+###
+
+PUT http://eclipse/api/mirrors/3 HTTP/1.1
+Content-Type: application/json
+
+{
+	"type": "type updated",
+	"params": "params updated"
+}
+
+###
 ###
 
 DELETE http://eclipse/api/widgets/6
