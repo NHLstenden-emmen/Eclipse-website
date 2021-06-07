@@ -24,3 +24,8 @@ Route::get('/widgets', [WidgetsApiController::class, 'index']);
 Route::post('/widgets', [WidgetsApiController::class, 'store']);
 Route::put('/widgets/{widget}', [WidgetsApiController::class, 'update']);
 Route::delete('/widgets/{widget}', [WidgetsApiController::class, 'destroy']);
+
+Route::get('/user_settings', [UserSettingsApiController::class, 'index']);
+Route::put('/user_settings/{setting}', [UserSettingsApiController::class, 'update']);
+
+Route::get('/mirror', [MirrorApiController::class, 'index']);  

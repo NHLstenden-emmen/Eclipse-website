@@ -8,8 +8,8 @@ POST http://eclipse/api/widgets HTTP/1.1
 Content-Type: application/json
 
 {
-	"type": "type",
-	"params": "params"
+	"type": "weer",
+	"params": "die info"
 }
 
 ###
