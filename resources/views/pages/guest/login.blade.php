@@ -14,6 +14,9 @@
 				<input value="" type="text" name="email" placeholder="email" required>
 				<input type="password" name="password" placeholder="password" required>
 				<div class="error"></div>
+				<label class="check">
+					<input type="checkbox" name="remember" id="remember"/>Remember email
+				</label><br>
 				<button class="inloggen" type="submit">Login</button><br>
 			</form> 
 		</div>
