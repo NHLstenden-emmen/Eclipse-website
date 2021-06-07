@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GuestPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [GuestPageController::class, 'home']);
+Route::get('/mirrorSpecs', [GuestPageController::class, 'mirrorSpecs']);
+Route::get('/setup', [GuestPageController::class, 'setup']);
+Route::get('/widgets', [GuestPageController::class, 'widgets']);
+Route::get('/login', [GuestPageController::class, 'login']);
