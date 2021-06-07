@@ -8,8 +8,8 @@ POST http://eclipse/api/widgets HTTP/1.1
 Content-Type: application/json
 
 {
-	"title": "my third title",
-	"content": "my third content"
+	"type": "type",
+	"params": "params"
 }
 
 ###
@@ -18,11 +18,12 @@ PUT http://eclipse/api/widgets/3 HTTP/1.1
 Content-Type: application/json
 
 {
-	"title": "my third title updated",
-	"content": "my third content updated"
+	"type": "type updated",
+	"params": "params updated"
 }
 
 ###
 
 DELETE http://eclipse/api/widgets/6
 
+ 

@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Widget;
-use App\Http\Controllers\WidgetApiController;
+use App\Models\Widgets;
+use App\Http\Controllers\WidgetsApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/widgets', [WidgetApiController::class, 'index']);
-Route::post('/widgets', [WidgetApiController::class, 'store']);
-Route::put('/widgets/{widget}', [WidgetApiController::class, 'update']);
-Route::delete('/widgets/{widget}', [WidgetApiController::class, 'destroy']);
+Route::get('/widgets', [WidgetsApiController::class, 'index']);
+Route::post('/widgets', [WidgetsApiController::class, 'store']);
+Route::put('/widgets/{widget}', [WidgetsApiController::class, 'update']);
+Route::delete('/widgets/{widget}', [WidgetsApiController::class, 'destroy']);

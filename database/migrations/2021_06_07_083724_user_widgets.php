@@ -19,7 +19,7 @@ class UserWidgets extends Migration
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
-            $table->foreign('widget_id')->references('id')->on('widget');
+            $table->foreign('widget_id')->references('id')->on('widgets');
             $table->foreign('mirror_id')->references('id')->on('mirror');
             $table->foreign('user_id')->references('id')->on('users');
         });
