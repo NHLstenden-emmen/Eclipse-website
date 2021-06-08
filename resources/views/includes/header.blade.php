@@ -9,7 +9,7 @@
 
 <!-- meta tags -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="description" content="Livestream page for the battle bots">
+<meta name="description" content="Eclipse smart mirror">
 <meta name="keywords" content="Eclipse">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
