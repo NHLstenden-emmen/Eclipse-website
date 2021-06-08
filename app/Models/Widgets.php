@@ -13,3 +13,4 @@ class Widgets extends Model
         'type', 'params'
     ];
 }
+ 
