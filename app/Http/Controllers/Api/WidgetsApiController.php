@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Models\Widgets;
 use Illuminate\Http\Request;
 
-class WidgetsApiController extends Controller
+class WidgetsApiController extends ApiController
 {
     public function index()
     {

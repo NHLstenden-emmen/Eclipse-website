@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Models\Mirrors;
 use Illuminate\Http\Request;
 
-class MirrorsApiController extends Controller
+class MirrorsApiController extends ApiController
 {
     public function index()
     {
