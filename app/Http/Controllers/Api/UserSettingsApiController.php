@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Models\user_settings;
 use Illuminate\Http\Request;
 
-class UserSettingsApiController extends Controller
+class UserSettingsApiController extends ApiController
 {
     public function index()
     {

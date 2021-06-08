@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 
-class AuthController extends Controller
+class AuthApiController extends ApiController
 {
     public function register(Request $request){
         $fields = $request->validate([
@@ -32,7 +32,7 @@ class AuthController extends Controller
         return response($response, 201);
     }
 
-    public function logout(Request $request){
+    public function logout(){
         auth()->user()->tokens()->delete();
         
         return[

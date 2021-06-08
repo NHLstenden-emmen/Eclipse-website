@@ -192,6 +192,7 @@ nav p a{
     margin-right: 10%;
     font-size: 1.4em;
 }
+
 .loginPagina {
 	position: absolute;
 	display: flex;
@@ -200,7 +201,7 @@ nav p a{
 	width: 100%;
 	height: 100%;
 }
-.loginbox {
+.loginPagina .loginbox {
 	background-color: white;
 	-webkit-box-shadow: 0 8px 6px -6px #ccc;
 	-moz-box-shadow: 0 8px 6px -6px #ccc;
@@ -209,8 +210,8 @@ nav p a{
     border-radius: 5px;
     padding: 20px;
 }
-input,
-select {
+.loginPagina input,
+.loginPagina select {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -220,7 +221,7 @@ select {
 	box-sizing: border-box;
 }
 
-button[type="submit"] {
+.loginPagina button[type="submit"] {
 	width: 100%;
 	background-color: var(--primary);
 	color: white;
@@ -231,19 +232,19 @@ button[type="submit"] {
 	cursor: pointer;
 }
 
-button[type="submit"]:hover {
+.loginPagina button[type="submit"]:hover {
 	background-color: #f5b24e;
 }
-.error{
+.loginPagina .error{
 	color: red;
 	text-align: center;
 }
-.check{
+.loginPagina .check{
 	
     width: 100%;
     text-align: center;
 }
-img{
+.loginPagina img{
 	
     border-style: none;
     width: 90%;
