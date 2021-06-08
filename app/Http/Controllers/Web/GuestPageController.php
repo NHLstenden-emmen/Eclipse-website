@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
 use Illuminate\Http\Request;
 
-class GuestPageController extends Controller
+class GuestPageController extends WebController
 {
     public function home()
     {
@@ -25,10 +25,4 @@ class GuestPageController extends Controller
     {
         return view('pages/guest/widgets');
     }
-
-    public function login()
-    {
-        return view('pages/guest/login');
-    }
-    
 }
