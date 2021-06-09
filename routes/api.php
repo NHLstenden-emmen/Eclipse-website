@@ -24,8 +24,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 // public routes
-Route::Post('/login', [AuthApiController::class, 'login']);
-Route::Post('/register', [AuthApiController::class, 'register']);
+Route::post('/login', [AuthApiController::class, 'login']);
+Route::post('/register', [AuthApiController::class, 'register']);
 Route::get('/widgets', [WidgetsApiController::class, 'index']);
 Route::get('/user_settings', [UserSettingsApiController::class, 'index']); 
 Route::get('/mirrors', [MirrorsApiController::class, 'index']);
@@ -33,7 +33,7 @@ Route::get('/mirrors', [MirrorsApiController::class, 'index']);
 
 // protected routs
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::Post('/logout', [AuthApiController::class, 'logout']);
+    Route::post('/logout', [AuthApiController::class, 'logout']);
     Route::post('/widgets', [WidgetsApiController::class, 'store']);
     Route::put('/widgets/{widget}', [WidgetsApiController::class, 'update']);
     Route::put('/user_settings/{setting}', [UserSettingsApiController::class, 'update']);
