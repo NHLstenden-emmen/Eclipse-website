@@ -18,7 +18,7 @@ class WidgetSeeder extends Seeder
     public function run()
     {
         DB::table('widgets')->insert([
-            'type' =>  'personal Message',
+            'type' =>  'weather',
             'params' => '{
   "coord": {
     "lon": -122.08,
@@ -66,5 +66,12 @@ class WidgetSeeder extends Seeder
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
+
+        DB::table('widgets')->insert([
+          'type' =>  'morning',
+          'params' => 'goede morgen pieter',
+          'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+          'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+      ]);
     }
 }

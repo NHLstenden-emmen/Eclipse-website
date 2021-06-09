@@ -1,4 +1,4 @@
-@extends('pages.auth.app')
+@extends('includes.app')
 
 @section('content')
 <main class="signup-form">

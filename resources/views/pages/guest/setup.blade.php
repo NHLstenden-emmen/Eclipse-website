@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    @include('includes\header')
-</head>
-<body>
+@extends('includes.app')
+
+@section('content')
     @include('includes\wave')
 	<div id='mainLayout' class="setup">
 		<div id="home">
@@ -62,5 +59,4 @@
 			</div>
 		</div>
 	</div>
-</body>
-</html>
+@endsection

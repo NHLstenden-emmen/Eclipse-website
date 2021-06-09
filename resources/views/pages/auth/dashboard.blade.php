@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Eclipse</title>
-    @include('includes\header')
-</head>
+@extends('includes.app')
 
-<body>
-
+@section('content')
     <nav class="navbar navbar-light navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
         <div class="container">
             <a class="navbar-brand mr-auto" href="#">PositronX</a>
@@ -33,7 +27,4 @@
         </div>
     </nav>
     @yield('content')
-
-</body>
-
-</html>
+@endsection

@@ -18,6 +18,7 @@ class UserSettings extends Migration
             $table->unsignedBigInteger('mirror_id');
             $table->unsignedBigInteger('user_id');
             $table->string('coords');
+            $table->boolean('talk');
             $table->timestamps();
 
             $table->foreign('widget_id')->references('id')->on('widgets');

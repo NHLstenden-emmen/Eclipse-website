@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    @include('includes\header')
-</head>
-<body>
+@extends('includes.app')
+
+@section('content')
     @include('includes\wave')
 	<div id='mainLayout' class="mirrorSpecs">
 		<div id="home">
@@ -62,5 +59,4 @@
 			</a>
 		</div>
 	</div>
-</body>
-</html>
+@endsection
