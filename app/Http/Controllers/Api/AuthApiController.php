@@ -32,14 +32,6 @@ class AuthApiController extends ApiController
         return response($response, 201);
     }
 
-    public function logout(){
-        auth()->user()->tokens()->delete();
-        
-        return[
-            'message' => "logged out"
-        ];
-    }
-
     public function login(Request $request){
         $fields = $request->validate([
             'email' => 'required|string',
@@ -64,5 +56,14 @@ class AuthApiController extends ApiController
         ];
 
         return response($response, 201);
+    }
+
+    
+    public function logout(){
+        auth()->user()->tokens()->delete();
+        
+        return[
+            'message' => "logged out"
+        ];
     }
 }

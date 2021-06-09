@@ -32,8 +32,6 @@ class AuthController extends WebController
         return redirect("login")->withSuccess('Login details are not valid');
     }
 
-
-
     public function registration()
     {
         return view('pages.auth.registration');
@@ -54,7 +52,6 @@ class AuthController extends WebController
         return redirect("dashboard")->withSuccess('You have signed-in');
     }
 
-
     public function create(array $data)
     {
         return User::create([
@@ -64,7 +61,6 @@ class AuthController extends WebController
         ]);
     }    
 
-
     public function dashboard()
     {
         if(Auth::check()){
@@ -73,7 +69,6 @@ class AuthController extends WebController
 
         return redirect("login")->withSuccess('You are not allowed to access');
     }
-
 
     public function signOut() {
         Session::flush();

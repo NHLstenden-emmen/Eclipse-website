@@ -192,3 +192,16 @@ nav p a{
     margin-right: 10%;
     font-size: 1.4em;
 }
+
+.singInUpLogo{
+	width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.singInUpLogo img{
+	max-width: 200px;
+	max-height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}

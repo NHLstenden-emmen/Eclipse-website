@@ -7,6 +7,9 @@
             <div class="row justify-content-center">
                 <div class="col-md-4">
                     <div class="card" style="margin-top: 50%;">
+                        <a href="/" class="singInUpLogo">
+                            <img src="img/logo/bigLogo.png" alt="Eclipse Logo">
+                        </a>
                         <h3 class="card-header text-center">Login</h3>
                         <div class="card-body">
                             <form method="POST" action="{{ route('login.custom') }}">
@@ -38,7 +41,10 @@
                                     <button type="submit" class="btn btn-dark btn-block">Signin</button>
                                 </div>
                             </form>
-
+                            <p style="text-align: center;">
+                                If you dont have a account make one 
+                                <a href="registration">Here.
+                            </a></p>
                         </div>
                     </div>
                 </div>
