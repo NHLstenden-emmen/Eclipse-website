@@ -25,8 +25,8 @@
 			@include('includes\navbar')
 			<div class="primaryContent">
 				<div class="textBlock">
-					<h1>Uitleg hoe makkelijk je de spiegel kan bedienen/installeren</h1>
-					<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit eu magna id vehicula. Ut ac rhoncus lacus. Integer non ultrices ante. </h5>
+					<h1>How to setup your own smart mirror.</h1>
+					<h5>A small and quick installation guide for your smart mirror.</h5>
 				</div>
 				<div class="imgBlock">
 				</div>
@@ -37,7 +37,7 @@
 						<i class="fas fa-plug"></i>
 					</div>
 					<div class="tekst">
-						<p>Steek de spiegel in het stopcontact</p>
+						<p>Place your new smart mirror near a wall outlet and connect it.</p>
 					</div>
 				</div>
 				<div class="information2">
@@ -45,7 +45,7 @@
 						<i class="fas fa-wifi"></i>
 					</div>
 					<div class="tekst">
-						<p>verbinding met internet</p>
+						<p>On the app the setup will start, after the setup the smart mirror is connected to the wifi and usable.</p>
 					</div>
 				</div>
 				<div class="information3">
@@ -53,7 +53,7 @@
 						<i class="fas fa-users"></i>
 					</div>
 					<div class="tekst">
-						<p>verbind de accounts </p>
+						<p>Now you are ready to go!</p>
 					</div>
 				</div>
 			</div>

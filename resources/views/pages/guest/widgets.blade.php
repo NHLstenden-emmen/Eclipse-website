@@ -19,8 +19,8 @@
 			@include('includes\navbar')
 			<div class="primaryContent">
 				<div class="textBlock">
-					<h1>Beschrijving van de verschillende widgets</h1>
-					<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit eu magna id vehicula. Ut ac rhoncus lacus. Integer non ultrices ante. </h5>
+					<h1>Which widgets will be available</h1>
+					<h5>Here we will show some of the widgets that will be available for the smart mirror.</h5>
 				</div>
 				<div class="imgBlock">
 				</div>
@@ -31,7 +31,7 @@
 						<i class="far fa-clock"></i>
 					</div>
 					<div class="tekst">
-						<p>uitleg over de klok en dat je verschillende timezones kan instellen</p>
+						<p>A time widget will be available and can be changed to your timezone.</p>
 					</div>
 				</div>
 				<div class="information2">
@@ -39,7 +39,7 @@
 						<i class="fas fa-cloud-moon-rain"></i>
 					</div>
 					<div class="tekst">
-						<p>een beschrijving van hoe de weer widget werkt en wat je er mee kan</p>
+						<p>A weather widget will be available and can be changed to your location.</p>
 					</div>
 				</div>
 				<div class="information3">
@@ -47,7 +47,7 @@
 						<i class="fas fa-calendar-alt"></i>
 					</div>
 					<div class="tekst">
-						<p>een calendar met nationale feest dagen en informatie van de gebruiker</p>
+						<p>A calander will be available and your day, month and year will be showed.</p>
 					</div>
 				</div>
 			</div>
