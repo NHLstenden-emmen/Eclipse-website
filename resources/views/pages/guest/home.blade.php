@@ -7,8 +7,8 @@
 			@include('includes\navbar')
 			<div class="primaryContent">
 				<div class="textBlock">
-					<h1>Uitleg over wat de mirror is</h1>
-					<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit eu magna id vehicula. Ut ac rhoncus lacus. Integer non ultrices ante. </h5>
+					<h1>About the mirror</h1>
+					<h5>The new personalisable smart mirror for your smart home collection.</h5>
 				</div>
 				<div class="imgBlock">
 					
@@ -20,7 +20,7 @@
 						<i class="fas fa-mobile-alt"></i>
 					</div>
 					<div class="tekst">
-						<p>door een app te gebruiken kan je data naar de server sturen</p>
+						<p>by using an app you can send data to the server.</p>
 					</div>
 				</div>
 				<div class="information2">
@@ -28,7 +28,7 @@
 						<i class="fas fa-server"></i>
 					</div>
 					<div class="tekst">
-						<p>die data word dan door gestuurd naar de spiegel met widget data</p>
+						<p>Behind the mirror there is a monitor that show all your personal.</p>
 					</div>
 				</div>
 				<div class="information3">
@@ -36,7 +36,7 @@
 						<i class="fas fa-tablet-alt"></i>
 					</div>
 					<div class="tekst">
-						<p>dan ontvangt de spiegel alle data en laat het zien op het scherm</p>
+						<p>then the mirror will receive all the data and show it on the screen.</p>
 					</div>
 				</div>
 			</div>

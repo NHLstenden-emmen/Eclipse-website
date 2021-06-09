@@ -13,8 +13,8 @@
 			@include('includes\navbar')
 			<div class="primaryContent">
 				<div class="textBlock">
-					<h1>Beschrijving van wat voor hardware er word gebruikt</h1>
-					<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit eu magna id vehicula. Ut ac rhoncus lacus. Integer non ultrices ante. </h5>
+					<h1>What is inside the smart mirror</h1>
+					<h5>A quick look what is inside the new smart mirror.</h5>
 				</div>
 				<div class="imgBlock">
 				</div>
@@ -25,7 +25,7 @@
 						<i class="fas fa-cogs"></i>
 					</div>
 					<div class="tekst">
-						<p>Hier komen verschillende uitleg blokken over wat je er allemaal mee kan </p>
+						<p>The smart mirror will controlled by a small computer "Raspberry PI".</p>
 					</div>
 				</div>
 				<div class="information2">
@@ -33,7 +33,7 @@
 						<i class="fas fa-user"></i>
 					</div>
 					<div class="tekst">
-						<p>Hier komen verschillende uitleg blokken over wat je er allemaal mee kan </p>
+						<p>Behind the mirror there is a monitor that will show all your personal widgets.</p>
 					</div>
 				</div>
 				<div class="information3">
@@ -41,7 +41,7 @@
 						<i class="fas fa-gamepad"></i>
 					</div>
 					<div class="tekst">
-						<p>Hier komen verschillende uitleg blokken over wat je er allemaal mee kan </p>
+						<p>The smart mirror is also equipped with sound speakers and a camera.</p>
 					</div>
 				</div>
 			</div>
