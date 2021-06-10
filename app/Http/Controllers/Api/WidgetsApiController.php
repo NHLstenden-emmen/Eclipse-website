@@ -50,4 +50,10 @@ class WidgetsApiController extends ApiController
             'success' => $success
         ];
     }
+
+    
+    public function weather()
+    {
+        // api call doen en het dan terug sturen als request
+    }
 }
