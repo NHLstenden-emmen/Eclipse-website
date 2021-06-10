@@ -9,10 +9,6 @@ class AdminController extends WebController
 {
     public function dashboard()
     {
-        if(Auth::check()){
-            return view('pages.user.dashboard');
-        }
-
-        return redirect("login")->withSuccess('You are not allowed to access');
+        return view('pages/admin/dashboard');
     }
 }

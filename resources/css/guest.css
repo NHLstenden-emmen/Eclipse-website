@@ -188,3 +188,6 @@ nav p a {
     margin-right: 10%;
     font-size: 1.4em;
 }
+.card-body .registerUserButton{
+    margin-top: 20px;
+}

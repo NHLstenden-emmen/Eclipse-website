@@ -1,5 +1,5 @@
-@extends('includes.app')
-
+@extends('includes.appguest')
+@section('title', 'mirror specs')
 @section('content')
     @include('includes\wave')
 	<div id='mainLayout' class="mirrorSpecs">

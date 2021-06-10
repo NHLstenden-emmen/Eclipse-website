@@ -1,4 +1,5 @@
-@extends('includes.app')
+@extends('includes.appguest')
+@section('title', 'sing in')
 
 @section('content')
     @include('includes\wave')
@@ -41,10 +42,6 @@
                                     <button type="submit" class="btn btn-dark btn-block">Signin</button>
                                 </div>
                             </form>
-                            <p style="text-align: center;">
-                                If you dont have a account make one 
-                                <a href="registration">Here.
-                            </a></p>
                         </div>
                     </div>
                 </div>

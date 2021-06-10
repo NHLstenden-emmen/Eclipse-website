@@ -3,8 +3,8 @@
 		<img src="img/logo/bigLogo.png" alt="Eclipse Logo">
 	</a>
 	@auth
-		<p><a class="nav-link" href="{{ route('dashboard') }}">dashboard</a></p>
+		<p><a class="nav-link" href="dashboard">dashboard</a></p>
 	@else
-		<p><a class="nav-link" href="{{ route('login') }}">Login</a></p>
+		<p><a class="nav-link" href="registration">Sign up</a></p>
 	@endauth
 </nav>

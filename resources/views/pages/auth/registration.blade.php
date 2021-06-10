@@ -1,4 +1,5 @@
-@extends('includes.app')
+@extends('includes.appguest')
+@section('title', 'sign up')
 
 @section('content')
     @include('includes\wave')
@@ -49,6 +50,10 @@
                                     <button type="submit" class="btn btn-dark btn-block">Sign up</button>
                                 </div>
                             </form>
+                            <p style="text-align: center;" class="registerUserButton">
+                                If you allready have a account login 
+                                <a href="login">Here.
+                            </a></p>
 
                         </div>
                     </div>

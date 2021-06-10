@@ -1,4 +1,5 @@
-@extends('includes.app')
+@extends('includes.appguest')
+@section('title', 'widget information')
 
 @section('content')
     @include('includes\wave')

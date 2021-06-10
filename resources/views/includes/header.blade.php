@@ -20,4 +20,3 @@
 
 <link href="/css/app.css" rel="stylesheet">
 <link href="/css/wave.css" rel="stylesheet">
-<link href="/css/guest.css" rel="stylesheet">
