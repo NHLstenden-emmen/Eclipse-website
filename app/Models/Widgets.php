@@ -12,5 +12,4 @@ class Widgets extends Model
     protected $fillable = [
         'type', 'params'
     ];
-}
- 
+} 

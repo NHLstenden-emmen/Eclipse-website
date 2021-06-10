@@ -12,29 +12,21 @@ class WidgetsApiController extends ApiController
         return Widgets::all();
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        request()->validate([
-            'type' => 'required',
-            'params' => 'required',
-        ]);
-
         return Widgets::create([
-            'type' => request('type'),
-            'params' => request('params'),
+            'type' => $request->input('type'),
+            'params' => $request->input('params'),
         ]);
     }
     
-    public function update(Widgets $widget)
+    public function update(Request $request)
     {
-        request()->validate([
-            'type' => 'required',
-            'params' => 'required',
-        ]);
+        $widget = Widgets::find($request->input('id'));
 
         $success = $widget->update([
-            'type' => request('type'),
-            'params' => request('params'),
+            'type' => $request->input('type'),
+            'params' => $request->input('params'),
         ]);
         
         return [
@@ -46,9 +38,9 @@ class WidgetsApiController extends ApiController
     {
         $success = $widget->delete();
 
-        return [
+        return response([
             'success' => $success
-        ];
+        ]);
     }
 
     

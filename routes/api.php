@@ -40,10 +40,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::post('/logout', [AuthApiController::class, 'logout']);
     Route::post('/widgets', [WidgetsApiController::class, 'store']);
-    Route::put('/widgets/{widget}', [WidgetsApiController::class, 'update']);
-    Route::put('/user_settings/{setting}', [UserSettingsApiController::class, 'update']);
-    Route::put('/mirrors/{setting}', [MirrorsApiController::class, 'update']);
-    Route::delete('/widgets/{widget}', [WidgetsApiController::class, 'destroy']);
+    Route::put('/widgets/update', [WidgetsApiController::class, 'update']);
+    // Route::put('/user_settings/{setting}', [UserSettingsApiController::class, 'update']);
+    // Route::put('/mirrors/{setting}', [MirrorsApiController::class, 'update']);
+    Route::delete('/widgets', [WidgetsApiController::class, 'destroy']);
 });
 
 
