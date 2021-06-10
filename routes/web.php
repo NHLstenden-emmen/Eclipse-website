@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\GuestPageController;
 use App\Http\Controllers\Web\AuthController;
+use App\Http\Controllers\Web\UserController;
+use App\Http\Controllers\Web\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +28,14 @@ Route::post('custom-login', [AuthController::class, 'customLogin'])->name('login
 Route::get('registration', [AuthController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [AuthController::class, 'customRegistration'])->name('register.custom');
 
-Route::get('dashboard', [AuthController::class, 'dashboard']); 
-Route::get('signout', [AuthController::class, 'signOut'])->name('signout'); 
+
+Route::group(['middleware' => ['role:user']], function () {
+	Route::get('dashboard', [UserController::class, 'dashboard']); 
+	Route::get('signout', [AuthController::class, 'signOut'])->name('signout'); 
+});
+
+Route::group(['middleware' => ['role:admin']], function () {
+	Route::get('dashboard', [AdminController::class, 'dashboard']); 
+	Route::get('signout', [AuthController::class, 'signOut'])->name('signout'); 
+
+});

@@ -61,15 +61,6 @@ class AuthController extends WebController
         ]);
     }    
 
-    public function dashboard()
-    {
-        if(Auth::check()){
-            return view('pages.user.dashboard');
-        }
-
-        return redirect("login")->withSuccess('You are not allowed to access');
-    }
-
     public function signOut() {
         Session::flush();
         Auth::logout();
