@@ -26,16 +26,17 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // public routes
 Route::post('/login', [AuthApiController::class, 'login']);
 Route::post('/register', [AuthApiController::class, 'register']);
-// moet specefiek wordne op user id ofzo
-Route::get('/widgets', [WidgetsApiController::class, 'index']);
-// give back spesific widget
-Route::get('/widgets/{widget1}', [WidgetsApiController::class, 'index']);
+// check of city gebruikt kan worden door open wheater map
+Route::get('/weather', [WidgetsApiController::class, 'weathercitycheck']);
+
+// haalt een spesefieke widget op op basis van de type
+Route::get('/widgets/getSpesificWidget', [WidgetsApiController::class, 'getSpesificWidget']);
 Route::get('/mirrors', [MirrorsApiController::class, 'index']);
 
 
 // protected routs
+// dit moet gecheck worden met token
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    // dit moet gecheck worden met token
     Route::get('/user_settings', [UserSettingsApiController::class, 'index']); 
 
     Route::post('/logout', [AuthApiController::class, 'logout']);
@@ -47,5 +48,3 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 });
 
 
-// check of city gebruikt kan worden door open wheater map
-Route::get('/weather/{city}', [WidgetsApiController::class, 'weather']);

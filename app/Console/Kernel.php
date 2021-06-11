@@ -24,7 +24,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('RandomCat:facts')->hourly();
+        $schedule->command('WeatherApi:Update emmen')->hourly();
+        $schedule->command('WeatherApi:Update groningen')->hourly();
     }
 
     /**

@@ -6,6 +6,12 @@ GET http://eclipse/api/user_settings HTTP/1.1
 ###
 GET http://eclipse/api/mirrors HTTP/1.1
 
+###check if city bestaat 
+
+GET http://eclipse/api/weather?city=emmen HTTP/1.1
+### Haal specefieke widgets op basis van de type naam
+
+GET http://eclipse/api/widgets/search?search=weather HTTP/1.1
 ### alle post's
 # maak een nieuwe widget aan 
 POST http://eclipse/api/widgets HTTP/1.1

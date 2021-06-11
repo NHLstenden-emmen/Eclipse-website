@@ -4,12 +4,21 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Widgets;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class WidgetsApiController extends ApiController
 {
     public function index()
     {
         return Widgets::all();
+    }
+
+    public function getSpesificWidget(Request $request)
+    {
+        $response = Widgets::select('type','params')->where('type', $request->search)->first();
+        return response([
+            'success' => $response
+        ]);
     }
 
     public function store(Request $request)
@@ -44,8 +53,27 @@ class WidgetsApiController extends ApiController
     }
 
     
-    public function weather()
+    public function weathercitycheck(Request $request)
     {
-        // api call doen en het dan terug sturen als request
+        $apiKey = env('WEATHER_API_KEY');
+
+        $response = Http::get('api.openweathermap.org/data/2.5/weather', [
+            'q' => $request->city,
+            'mode' => 'json',
+            'appid' => $apiKey
+        ]);
+
+        $response = $response->json();
+        $checkresponse = $response['cod'];
+
+        if ($checkresponse === 200) {
+            return response([
+                'success' => $response
+            ]);
+        } else {
+            return response([
+                'failed' => 'city is not found'
+            ], 404);
+        }
     }
 }

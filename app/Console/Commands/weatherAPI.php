@@ -21,7 +21,7 @@ class weatherAPI extends Command
      *
      * @var string
      */
-    protected $description = 'Update the weather api data';
+    protected $description = 'Update the weather api data for a spesific location';
 
     /**
      * Create a new command instance.
@@ -56,7 +56,12 @@ class weatherAPI extends Command
         $weather = $response['weather'][0]['main'];
         $description = $response['weather'][0]['description'];
 
-        Widgets::query()->updateOrCreate(['type' => sprintf('weather:%s', $this->argument('location'))], ['params' => $weather]);
+        Widgets::query()->updateOrCreate(['type' => sprintf('weather:%s', $this->argument('location'))], 
+        ['params' => "
+            main: ".$weather.' ,
+            icon: '.$icon.' ,
+            temp: '.$temp.' ,
+            location: '.$this->argument('location')]);
         
         return 0;
     }
