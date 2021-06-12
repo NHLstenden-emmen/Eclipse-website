@@ -1,6 +1,8 @@
 # Eclipse website / api
 
-run to let the apis update 
+run to let the apis automaticly
 ```
-php artisan schedule:work 
+cd C:\inetpub\wwwroot && php artisan schedule:run
+cd C:\inetpub\wwwroot && php artisan schedule:work
+
 ```
