@@ -30,6 +30,31 @@
 					<h5>A small and quick installation guide for your smart mirror.</h5>
 				</div>
 				<div class="imgBlock">
+					
+					@php
+					$dir = 'img/guestImages/illustrations/';					
+					$spesificPage = Route::getFacadeRoot()->current()->uri();
+					if ($spesificPage == '/') {
+						$spesificPage = 'home';
+					}
+					$countSvg = 0;
+					foreach (glob($dir."*.svg") as $filename) {
+						$name = str_replace($dir, "", $filename);
+						$name = str_replace(".svg", "", $name);
+						$pathLengt = Str::length($spesificPage);
+						if (substr($name, 0, $pathLengt) == $spesificPage)
+						{
+							$countSvg++;
+						}
+					}
+					if ($countSvg > 1) {
+						$num = rand(1,$countSvg); 
+					} else{
+						$num = 1;
+					}
+					$spesificPage = str_replace("/", "", $spesificPage);
+					echo "<img src='".$dir.$spesificPage.$num.".svg' alt='A random illustration for the ".$spesificPage." page'>";
+					@endphp
 				</div>
 			</div>
 			<div class="secondContent">
