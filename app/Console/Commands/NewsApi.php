@@ -49,7 +49,5 @@ class NewsApi extends Command
         ]);
         
         Widgets::query()->updateOrCreate(['type' => 'news'], ['recentdata' => $response]);
-        
-        return 0;
     }
 }

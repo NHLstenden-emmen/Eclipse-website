@@ -61,8 +61,7 @@ class weatherAPI extends Command
             main: ".$weather.' ,
             icon: '.$icon.' ,
             temp: '.$temp.' ,
-            location: '.$this->argument('location')]);
-        
-        return 0;
+            location: '.$this->argument('location')
+        ]);
     }
 }
