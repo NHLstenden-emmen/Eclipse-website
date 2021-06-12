@@ -225,6 +225,10 @@ nav .nav-link{
     width: 100%;
     text-decoration: none;
 }
+.row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
 @media only screen and (min-width: 901px) {
 	.topnav{
 		display: none;
