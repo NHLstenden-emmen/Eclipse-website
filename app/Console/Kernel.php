@@ -27,6 +27,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('RandomCat:facts')->hourly();
         $schedule->command('WeatherApi:Update emmen')->hourly();
         $schedule->command('WeatherApi:Update groningen')->hourly();
+        $schedule->command('NewsApi:Update')->hourly();
     }
 
     /**

@@ -48,7 +48,7 @@ class NewsApi extends Command
             'sources' => 'bbc-news'
         ]);
         
-        Widgets::query()->updateOrCreate(['type' => 'news'], ['params' => $response]);
+        Widgets::query()->updateOrCreate(['type' => 'news'], ['recentdata' => $response]);
         
         return 0;
     }

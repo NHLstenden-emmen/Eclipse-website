@@ -57,7 +57,7 @@ class weatherAPI extends Command
         $description = $response['weather'][0]['description'];
 
         Widgets::query()->updateOrCreate(['type' => sprintf('weather:%s', $this->argument('location'))], 
-        ['params' => "
+        ['recentdata' => "
             main: ".$weather.' ,
             icon: '.$icon.' ,
             temp: '.$temp.' ,
