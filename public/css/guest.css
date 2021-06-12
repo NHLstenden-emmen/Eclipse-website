@@ -102,7 +102,7 @@ nav img{
     height: 50px;
 }
 
-nav p a{
+nav .nav-link{
 	color: var(--white);
     border: 1px solid var(--secondary);
     background-color: var(--secondary);
@@ -208,4 +208,53 @@ nav p a{
 
 .card-body .registerUserButton{
     margin-top: 20px;
+}
+.logoutbutton{
+	text-align: center;
+}
+.specialButton{
+	color: var(--white);
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
+    box-shadow: 0 0 5px -1px rgb(0 0 0 / 20%);
+    padding: 5px;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    text-decoration: none;
+}
+@media only screen and (max-width: 900px) {
+	#mainLayout {
+		display: grid;
+		width: 100%;
+		height: 100vh;
+		grid-template-areas: "home mirrorSpecs widgets setup";
+	}
+	
+	#mainLayout.home {
+		grid-template-columns: 100% 0% 0% 0%;
+	}
+	#mainLayout.mirrorSpecs {
+		grid-template-columns: 0% 100% 0% 0%;
+	}
+	#mainLayout.widgets {
+		grid-template-columns: 0% 0% 100% 0%;
+	}
+	#mainLayout.setup {
+		grid-template-columns: 0% 0% 0% 100%;
+	}
+	
+	#mainLayout #home {
+		grid-area: home;
+	}
+	#mainLayout #mirrorSpecs {
+		grid-area: mirrorSpecs;
+	}
+	#mainLayout #widgets {
+		grid-area: widgets;
+	}
+	#mainLayout #setup {
+		grid-area: setup;
+	}
 }

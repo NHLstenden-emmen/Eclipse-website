@@ -24,10 +24,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('RandomCat:facts')->everyMinute();
-        $schedule->command('NewsApi:Update')->hourly();
-        $schedule->command('WeatherApi:Update emmen')->hourly();
-        $schedule->command('WeatherApi:Update groningen')->hourly();
+        $schedule->command('RandomCat:facts')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('NewsApi:Update')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('WeatherApi:Update emmen')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('WeatherApi:Update groningen')->everyThirtyMinutes()->withoutOverlapping();
     }
 
     /**

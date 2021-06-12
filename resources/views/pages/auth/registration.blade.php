@@ -1,4 +1,4 @@
-@extends('includes.appguest')
+@extends('includes.app')
 @section('title', 'sign up')
 
 @section('content')
@@ -47,7 +47,7 @@
                                 </div>
 
                                 <div class="d-grid mx-auto">
-                                    <button type="submit" class="btn btn-dark btn-block">Sign up</button>
+                                    <button type="submit" class="specialButton">Sign up</button>
                                 </div>
                             </form>
                             <p style="text-align: center;" class="registerUserButton">

@@ -7,4 +7,4 @@
 	@else
 		<p><a class="nav-link" href="registration">Sign up</a></p>
 	@endauth
-</nav>
+</>

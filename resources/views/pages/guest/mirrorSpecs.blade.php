@@ -1,4 +1,4 @@
-@extends('includes.appguest')
+@extends('includes.app')
 @section('title', 'mirror specs')
 @section('content')
     @include('includes\wave')

@@ -10,6 +10,6 @@ class Widgets extends Model
     use HasFactory;
 
     protected $fillable = [
-        'type', 'params'
+        'type', 'params', 'recentdata'
     ];
 } 

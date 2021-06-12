@@ -1,4 +1,4 @@
-@extends('includes.appguest')
+@extends('includes.app')
 @section('title', 'how to setup')
 
 @section('content')
