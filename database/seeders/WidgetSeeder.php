@@ -19,7 +19,7 @@ class WidgetSeeder extends Seeder
     {
       DB::table('widgets')->insert([
           'type' =>  'morning',
-          'recentdata' => 'goede morgen pieter',
+          'recentdata' => 'Goede morgen ',
           'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
           'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
       ]);

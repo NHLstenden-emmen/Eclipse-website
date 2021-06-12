@@ -53,7 +53,7 @@ class WidgetsApiController extends ApiController
     }
 
     
-    public function weathercitycheck(Request $request)
+    public function weatherCityCheck(Request $request)
     {
         $apiKey = env('WEATHER_API_KEY');
 
@@ -75,5 +75,13 @@ class WidgetsApiController extends ApiController
                 'failed' => 'city is not found'
             ], 404);
         }
+    }
+
+    public function CheckCityId()
+    {
+        $response = 'wat wil je terug krijgen?';
+        return response([
+            'success' => $response
+        ]);
     }
 }

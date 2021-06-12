@@ -26,12 +26,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // public routes
 Route::post('/login', [AuthApiController::class, 'login']);
 Route::post('/register', [AuthApiController::class, 'register']);
+Route::get('/mirrors', [MirrorsApiController::class, 'index']);
+Route::get('/widgets', [WidgetsApiController::class, 'index']);
+
 // check of city gebruikt kan worden door open wheater map
-Route::get('/weather', [WidgetsApiController::class, 'weathercitycheck']);
+Route::get('/weather', [WidgetsApiController::class, 'weatherCityCheck']);
+Route::get('/weatherwidget/{cityId}', [WidgetsApiController::class, 'CheckCityId']);
 
 // haalt een spesefieke widget op op basis van de type
 Route::get('/widgets/getSpesificWidget', [WidgetsApiController::class, 'getSpesificWidget']);
-Route::get('/mirrors', [MirrorsApiController::class, 'index']);
 
 
 // protected routs
