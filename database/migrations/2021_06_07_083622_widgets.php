@@ -16,8 +16,8 @@ class Widgets extends Migration
         Schema::create('widgets', function (Blueprint $table) {
             $table->id('id');
             $table->string('type');
-            $table->string('params');
-            $table->text('recentdata');
+            $table->string('params')->nullable();
+            $table->text('recentdata')->nullable();
             $table->timestamps();
         });
     }
