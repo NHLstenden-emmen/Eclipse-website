@@ -12,9 +12,16 @@
                         </a>
                         <div class="card-body">
                             <div style="text-align: center;" class="logoutbutton">
-                                <p>your account works</p>
-                                <a class="specialButton" href="{{ route('signout') }}">Logout</a>
+                                <p>your account works Download
+                                    <a href=""> here the app.</a>
+                                </p>
+                                @php
+                                    var_dump($user);
+                                @endphp
                             </div>
+                        </div>
+                        <div class="card-footer">
+                            <a class="specialButton" href="{{ route('signout') }}">Logout</a>
                         </div>
                     </div>
                 </div>

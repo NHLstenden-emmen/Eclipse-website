@@ -11,21 +11,4 @@ class MirrorsApiController extends ApiController
     {
         return Mirrors::all();
     }
-    
-    public function update(Mirrors $mirror)
-    {
-        request()->validate([
-            'type' => 'required',
-            'params' => 'required',
-        ]);
-
-        $success = $mirror->update([
-            'type' => request('type'),
-            'params' => request('params'),
-        ]);
-        
-        return [
-            'success' => $success
-        ];
-    }
 }

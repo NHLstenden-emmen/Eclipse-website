@@ -35,19 +35,17 @@ Route::get('/weatherwidget/{cityId}', [WidgetsApiController::class, 'CheckCityId
 
 // haalt een spesefieke widget op op basis van de type
 Route::get('/widgets/getSpesificWidget', [WidgetsApiController::class, 'getSpesificWidget']);
+Route::get('/user_settings', [UserSettingsApiController::class, 'index']);
 
 
 // protected routs
 // dit moet gecheck worden met token
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::get('/user_settings', [UserSettingsApiController::class, 'index']); 
+    // gegevens terug krijgen van specefieke gebruiker
 
     Route::post('/logout', [AuthApiController::class, 'logout']);
     Route::post('/widgets', [WidgetsApiController::class, 'store']);
     Route::put('/widgets/update', [WidgetsApiController::class, 'update']);
     // Route::put('/user_settings/{setting}', [UserSettingsApiController::class, 'update']);
-    // Route::put('/mirrors/{setting}', [MirrorsApiController::class, 'update']);
     Route::delete('/widgets', [WidgetsApiController::class, 'destroy']);
 });
-
-

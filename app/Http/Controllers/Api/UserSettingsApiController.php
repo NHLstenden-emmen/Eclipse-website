@@ -12,16 +12,11 @@ class UserSettingsApiController extends ApiController
         return user_settings::all();
     }
     
-    public function update(user_settings $user_setting)
+    public function update(Request $request)
     {
-        request()->validate([
-            'type' => 'required',
-            'params' => 'required',
-        ]);
+        $widget = user_settings::find($request->input('id'));
 
-        $success = $user_setting->update([
-            'type' => request('type'),
-            'params' => request('params'),
+        $success = $widget->update([
         ]);
         
         return [

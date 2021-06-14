@@ -8,8 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class user_settings extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'coords'
-    ];
 }
