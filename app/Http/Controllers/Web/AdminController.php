@@ -9,6 +9,10 @@ class AdminController extends WebController
 {
     public function dashboard()
     {
+        \QrCode::size(500)
+                ->format('png')
+                ->generate('codingdriver.com', public_path('img/qrcode.png'));
+        
         return view('pages/admin/dashboard');
     }
 }

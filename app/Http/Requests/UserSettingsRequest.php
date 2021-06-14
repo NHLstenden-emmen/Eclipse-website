@@ -24,6 +24,7 @@ class UserSettingsRequest extends FormRequest
     public function rules()
     {
         return [
+            'widget_settings' => 'required',
         ];
     }
 }

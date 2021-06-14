@@ -12,15 +12,23 @@ class UserSettingsApiController extends ApiController
         return user_settings::all();
     }
     
+    public function getUserSettings(Request $request) {
+        $response = user_settings::select('widget_settings')->where('id', $request->id)->first();
+        return response([
+            'success' => $response['widget_settings']
+        ]);
+	}
+
     public function update(Request $request)
     {
-        $widget = user_settings::find($request->input('id'));
-
-        $success = $widget->update([
-        ]);
+        $user_settings = user_settings::find($request->input('id'));
         
-        return [
+        $success = $user_settings->update([
+            'widget_settings' => $request->input('widget_settings'),
+        ]);
+	
+        return ([
             'success' => $success
-        ];
+        ]);
     }
 }

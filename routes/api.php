@@ -32,6 +32,7 @@ Route::post('/register', [AuthApiController::class, 'register']);
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/mirrors', [MirrorsApiController::class, 'index']);
     Route::get('/widgets', [WidgetsApiController::class, 'index']);
+    Route::get('/user_settings/search/{id}', [UserSettingsApiController::class, 'getUserSettings']);
     
     // check of city gebruikt kan worden door open wheater map
     Route::get('/weather', [WidgetsApiController::class, 'weatherCityCheck']);
@@ -40,12 +41,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     // haalt een spesefieke widget op op basis van de type
     Route::get('/widgets/getSpesificWidget', [WidgetsApiController::class, 'getSpesificWidget']);
 
-    // gegevens terug krijgen van specefieke gebruiker
-    Route::get('/user_settings', [UserSettingsApiController::class, 'index']);
-
     Route::post('/logout', [AuthApiController::class, 'logout']);
     Route::post('/widgets/store', [WidgetsApiController::class, 'store']);
     Route::put('/widgets/update', [WidgetsApiController::class, 'update']);
-    Route::put('/user_settings/{setting}', [UserSettingsApiController::class, 'update']);
+
+    Route::post('/user_settings/update', [UserSettingsApiController::class, 'update']);
     // Route::delete('/widgets/destroy/{id}', [WidgetsApiController::class, 'destroy']);
 });
