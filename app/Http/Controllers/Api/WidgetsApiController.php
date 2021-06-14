@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\Widgets;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use App\Http\Requests\WidgetRequest;
 
 class WidgetsApiController extends ApiController
 {
@@ -26,6 +27,7 @@ class WidgetsApiController extends ApiController
         return Widgets::create([
             'type' => $request->input('type'),
             'params' => $request->input('params'),
+            'recentdata' => $request->input('recentdata'),
         ]);
     }
     
@@ -36,6 +38,7 @@ class WidgetsApiController extends ApiController
         $success = $widget->update([
             'type' => $request->input('type'),
             'params' => $request->input('params'),
+            'recentdata' => $request->input('recentdata'),
         ]);
         
         return [
@@ -43,14 +46,14 @@ class WidgetsApiController extends ApiController
         ];
     }
 
-    public function destroy(Widgets $widget)
-    {
-        $success = $widget->delete();
+    // public function destroy(Widgets $widget)
+    // {
+    //     $success = $widget->delete();
 
-        return response([
-            'success' => $success
-        ]);
-    }
+    //     return response([
+    //         'success' => $success
+    //     ]);
+    // }
 
     
     public function weatherCityCheck(Request $request)
@@ -68,11 +71,11 @@ class WidgetsApiController extends ApiController
 
         if ($checkresponse === 200) {
             return response([
-                'success' => $response
-            ]);
+                'success' => $checkresponse
+            ], 404);
         } else {
             return response([
-                'failed' => 'city is not found'
+                'failed' => $checkresponse
             ], 404);
         }
     }

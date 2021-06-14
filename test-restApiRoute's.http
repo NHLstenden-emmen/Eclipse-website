@@ -1,30 +1,24 @@
 GET http://eclipse/api/widgets HTTP/1.1
+Accept: application/json
+Authorization: Bearer {token}
 
 ### 
 GET http://eclipse/api/user_settings HTTP/1.1
+Accept: application/json
+Authorization: Bearer {token}
 
 ###
 GET http://eclipse/api/mirrors HTTP/1.1
+Accept: application/json
+Authorization: Bearer {token}
 
 ###check if city bestaat 
 
 GET http://eclipse/api/weather?city=emmen HTTP/1.1
-### Haal specefieke widgets op basis van de type naam
+Authorization: Bearer {token}
 
-GET http://eclipse/api/widgets/search?search=weather HTTP/1.1
 ### alle post's
-# maak een nieuwe widget aan 
-POST http://eclipse/api/widgets HTTP/1.1
-Content-Type: application/json
-Accept: application/json
-Authorization: 
-
-{
-	"type": "weer",
-	"params": "die info"
-}
 ### Maak een gebruiker aan
-
 POST http://eclipse/api/register HTTP/1.1
 Content-Type: application/json
 Accept: application/json
@@ -33,7 +27,7 @@ Accept: application/json
 	"name": "test",
 	"email": "bob@de.bouwer",
 	"password": "123456",
-	"password_confirmation": "123456",
+	"password_confirmation": "123456"
 }
 
 ### log de gebruiker in
@@ -43,58 +37,46 @@ Content-Type: application/json
 Accept: application/json
 
 {
-	"email": "bob@de.bouwer",
-	"password": "123456",
+	"email": "test@test.test",
+	"password": "password"
 }
 
 ### log een gebruiker uit
 POST http://eclipse/api/logout HTTP/1.1
 Content-Type: application/json
 Accept: application/json
-Authorization:  
+Authorization: Bearer {token}
 
+### maak een nieuwe widget aan
+
+POST http://eclipse/api/widgets/store HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {token}
+
+{
+	"type": "weer",
+	"params": "die info",
+	"recentdata": "recentdata"
+}
 
 ### alle put requests
 ### update een widget op basis van id
 
-PUT http://eclipse/api/widgets/3 HTTP/1.1
+PUT http://eclipse/api/widgets/update?id=3 HTTP/1.1
 Content-Type: application/json
 Accept: application/json
-Authorization:  
+Authorization: Bearer {token}
 
 {
 	"type": "type updated",
-	"params": "params updated"
-}
-
-### update user settings
-
-PUT http://eclipse/api/user_settings/3 HTTP/1.1
-Content-Type: application/json
-Accept: application/json
-Authorization:  
-
-{
-	"type": "type updated",
-	"params": "params updated"
-}
-
-
-### update mirror
-
-PUT http://eclipse/api/mirrors/3 HTTP/1.1
-Content-Type: application/json
-Accept: application/json
-Authorization:  
-
-{
-	"type": "type updated",
-	"params": "params updated"
+	"params": "params updated",
+	"recentdata": "recentdata"
 }
 
 ### delete routs
 ### delete een widget
-
-DELETE http://eclipse/api/widgets/5
+# no longer available
+DELETE http://eclipse/api/widgets/destroy/5
 Accept: application/json
-Authorization: 
+Authorization: Bearer {token}

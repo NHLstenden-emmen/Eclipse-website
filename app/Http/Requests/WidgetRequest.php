@@ -26,6 +26,7 @@ class WidgetRequest extends FormRequest
         return [
             'type' => 'required',
             'params' => 'required',
+            'recentdata' => 'required'
         ];
     }
 }

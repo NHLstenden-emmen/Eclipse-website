@@ -26,26 +26,26 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // public routes
 Route::post('/login', [AuthApiController::class, 'login']);
 Route::post('/register', [AuthApiController::class, 'register']);
-Route::get('/mirrors', [MirrorsApiController::class, 'index']);
-Route::get('/widgets', [WidgetsApiController::class, 'index']);
-
-// check of city gebruikt kan worden door open wheater map
-Route::get('/weather', [WidgetsApiController::class, 'weatherCityCheck']);
-Route::get('/weatherwidget/{cityId}', [WidgetsApiController::class, 'CheckCityId']);
-
-// haalt een spesefieke widget op op basis van de type
-Route::get('/widgets/getSpesificWidget', [WidgetsApiController::class, 'getSpesificWidget']);
-Route::get('/user_settings', [UserSettingsApiController::class, 'index']);
-
 
 // protected routs
 // dit moet gecheck worden met token
 Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('/mirrors', [MirrorsApiController::class, 'index']);
+    Route::get('/widgets', [WidgetsApiController::class, 'index']);
+    
+    // check of city gebruikt kan worden door open wheater map
+    Route::get('/weather', [WidgetsApiController::class, 'weatherCityCheck']);
+    Route::get('/weatherwidget/{cityId}', [WidgetsApiController::class, 'CheckCityId']);
+
+    // haalt een spesefieke widget op op basis van de type
+    Route::get('/widgets/getSpesificWidget', [WidgetsApiController::class, 'getSpesificWidget']);
+
     // gegevens terug krijgen van specefieke gebruiker
+    Route::get('/user_settings', [UserSettingsApiController::class, 'index']);
 
     Route::post('/logout', [AuthApiController::class, 'logout']);
-    Route::post('/widgets', [WidgetsApiController::class, 'store']);
+    Route::post('/widgets/store', [WidgetsApiController::class, 'store']);
     Route::put('/widgets/update', [WidgetsApiController::class, 'update']);
-    // Route::put('/user_settings/{setting}', [UserSettingsApiController::class, 'update']);
-    Route::delete('/widgets', [WidgetsApiController::class, 'destroy']);
+    Route::put('/user_settings/{setting}', [UserSettingsApiController::class, 'update']);
+    // Route::delete('/widgets/destroy/{id}', [WidgetsApiController::class, 'destroy']);
 });
