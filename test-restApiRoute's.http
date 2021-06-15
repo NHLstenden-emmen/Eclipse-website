@@ -42,19 +42,6 @@ Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {token}
 
-### maak een nieuwe widget aan
-
-POST http://eclipse/api/widgets/store HTTP/1.1
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer {token}
-
-{
-	"type": "weer",
-	"params": "die info",
-	"recentdata": "recentdata"
-}
-
 ### krijg alle user_settings
 
 POST http://eclipse/api/user_settings/update?id=1 HTTP/1.1
@@ -67,24 +54,3 @@ Authorization: Bearer {token}
 	"params": "die info",
 	"recentdata": "recentdata"
 }
-
-### alle put requests
-### update een widget op basis van id
-
-PUT http://eclipse/api/widgets/update?id=3 HTTP/1.1
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer {token}
-
-{
-	"type": "type updated",
-	"params": "params updated",
-	"recentdata": "recentdata"
-}
-
-### delete routs
-### delete een widget
-# no longer available
-DELETE http://eclipse/api/widgets/destroy/5
-Accept: application/json
-Authorization: Bearer {token}

@@ -25,6 +25,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/login', [AuthApiController::class, 'login']);
 Route::post('/register', [AuthApiController::class, 'register']);
 
+Route::get('/noAuth/widgets', [WidgetsApiController::class, 'index']);
+Route::get('/noAuth/user_settings/search/{id}', [UserSettingsApiController::class, 'getUserSettings']);
+
 // protected routs
 // dit moet gecheck worden met token
 Route::group(['middleware' => ['auth:sanctum']], function () {
