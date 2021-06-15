@@ -21,7 +21,6 @@ class UserSeeder extends Seeder
             'name' => 'kevinsmul',
             'email' => 'test@test.test',
             'password' => Hash::make('password'),
-            'role' => 'user',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);

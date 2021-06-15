@@ -2,9 +2,7 @@
 
 use App\Http\Controllers\Api\WidgetsApiController;
 use App\Http\Controllers\Api\UserSettingsApiController;
-use App\Http\Controllers\Api\MirrorsApiController;
 use App\Http\Controllers\Api\AuthApiController;
-use GuzzleHttp\Middleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -30,7 +28,6 @@ Route::post('/register', [AuthApiController::class, 'register']);
 // protected routs
 // dit moet gecheck worden met token
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::get('/mirrors', [MirrorsApiController::class, 'index']);
     Route::get('/widgets', [WidgetsApiController::class, 'index']);
     Route::get('/user_settings/search/{id}', [UserSettingsApiController::class, 'getUserSettings']);
     
@@ -42,8 +39,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/widgets/getSpesificWidget', [WidgetsApiController::class, 'getSpesificWidget']);
 
     Route::post('/logout', [AuthApiController::class, 'logout']);
-    Route::post('/widgets/store', [WidgetsApiController::class, 'store']);
-    Route::put('/widgets/update', [WidgetsApiController::class, 'update']);
+    // Route::post('/widgets/store', [WidgetsApiController::class, 'store']);
+    // Route::put('/widgets/update', [WidgetsApiController::class, 'update']);
 
     Route::post('/user_settings/update', [UserSettingsApiController::class, 'update']);
     // Route::delete('/widgets/destroy/{id}', [WidgetsApiController::class, 'destroy']);

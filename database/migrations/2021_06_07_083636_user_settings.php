@@ -13,16 +13,6 @@ class UserSettings extends Migration
      */
     public function up()
     {
-        // Schema::create('user_settings', function (Blueprint $table) {
-        //     $table->unsignedBigInteger('widget_id');
-        //     $table->unsignedBigInteger('mirror_id');
-        //     $table->unsignedBigInteger('user_id');
-        //     $table->timestamps();
-
-        //     $table->foreign('widget_id')->references('id')->on('widgets');
-        //     $table->foreign('mirror_id')->references('id')->on('mirrors');
-        //     $table->foreign('user_id')->references('id')->on('users');
-        // });
         Schema::create('user_settings', function (Blueprint $table) {
             $table->id('id');
             $table->text('widget_settings');
