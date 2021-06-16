@@ -46,16 +46,6 @@ class WidgetsApiController extends ApiController
         ];
     }
 
-    // public function destroy(Widgets $widget)
-    // {
-    //     $success = $widget->delete();
-
-    //     return response([
-    //         'success' => $success
-    //     ]);
-    // }
-
-    
     public function weatherCityCheck(Request $request)
     {
         $apiKey = env('WEATHER_API_KEY');
@@ -68,11 +58,13 @@ class WidgetsApiController extends ApiController
 
         $response = $response->json();
         $checkresponse = $response['cod'];
+        $city_id = $response['id'];
 
         if ($checkresponse === 200) {
             return response([
-                'success' => $checkresponse
-            ], 404);
+                'success' => $checkresponse,
+                'cityID' => $city_id
+            ], 200);
         } else {
             return response([
                 'failed' => $checkresponse

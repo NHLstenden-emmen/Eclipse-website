@@ -36,7 +36,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     
     // check of city gebruikt kan worden door open wheater map
     Route::get('/weather', [WidgetsApiController::class, 'weatherCityCheck']);
-    Route::get('/weatherwidget/{cityId}', [WidgetsApiController::class, 'CheckCityId']);
+    Route::get('/weatherwidget/{cityId}', [WidgetsApiController::class, 'CheckCity']);
 
     // haalt een spesefieke widget op op basis van de type
     Route::get('/widgets/getSpesificWidget', [WidgetsApiController::class, 'getSpesificWidget']);
