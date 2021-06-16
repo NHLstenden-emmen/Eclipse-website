@@ -29,11 +29,11 @@ Route::post('/register', [AuthApiController::class, 'register']);
 Route::get('/noAuth/widgets', [WidgetsApiController::class, 'index']);
 Route::get('/noAuth/user_settings/search/{id}', [UserSettingsApiController::class, 'getUserSettings']);
 Route::get('/noAuth/weather/search/{cityID}', [WeatherApiController::class, 'getWeather']);
+Route::get('/widgets', [WidgetsApiController::class, 'index']);
 
 // protected routs
 // dit moet gecheck worden met token
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::get('/widgets', [WidgetsApiController::class, 'index']);
     Route::get('/user_settings/search/{id}', [UserSettingsApiController::class, 'getUserSettings']);
     
     // check of city gebruikt kan worden door open wheater map
