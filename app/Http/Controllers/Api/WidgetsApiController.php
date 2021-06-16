@@ -46,37 +46,4 @@ class WidgetsApiController extends ApiController
         ];
     }
 
-    public function weatherCityCheck(Request $request)
-    {
-        $apiKey = env('WEATHER_API_KEY');
-
-        $response = Http::get('api.openweathermap.org/data/2.5/weather', [
-            'q' => $request->city,
-            'mode' => 'json',
-            'appid' => $apiKey
-        ]);
-
-        $response = $response->json();
-        $checkresponse = $response['cod'];
-        $city_id = $response['id'];
-
-        if ($checkresponse === 200) {
-            return response([
-                'success' => $checkresponse,
-                'cityID' => $city_id
-            ], 200);
-        } else {
-            return response([
-                'failed' => $checkresponse
-            ], 404);
-        }
-    }
-
-    public function CheckCityId()
-    {
-        $response = 'wat wil je terug krijgen?';
-        return response([
-            'success' => $response
-        ]);
-    }
 }

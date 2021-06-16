@@ -7,6 +7,15 @@ GET http://eclipse/api/user_settings/search/1 HTTP/1.1
 Accept: application/json
 Authorization: Bearer {token}
 
+
+### for the mirror
+GET http://eclipse/api/noAuth/user_settings/search/1 HTTP/1.1
+Accept: application/json
+
+### for the mirror
+GET http://eclipse/api/noAuth/weather/search/1 HTTP/1.1
+Accept: application/json
+
 ###check if city bestaat 
 
 GET http://eclipse/api/weather?city=emmen HTTP/1.1

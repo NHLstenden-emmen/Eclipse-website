@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\WidgetsApiController;
+use App\Http\Controllers\Api\WeatherApiController;
 use App\Http\Controllers\Api\UserSettingsApiController;
 use App\Http\Controllers\Api\AuthApiController;
 use Illuminate\Http\Request;
@@ -27,6 +28,7 @@ Route::post('/register', [AuthApiController::class, 'register']);
 
 Route::get('/noAuth/widgets', [WidgetsApiController::class, 'index']);
 Route::get('/noAuth/user_settings/search/{id}', [UserSettingsApiController::class, 'getUserSettings']);
+Route::get('/noAuth/weather/search/{cityID}', [WeatherApiController::class, 'getWeather']);
 
 // protected routs
 // dit moet gecheck worden met token
@@ -35,8 +37,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/user_settings/search/{id}', [UserSettingsApiController::class, 'getUserSettings']);
     
     // check of city gebruikt kan worden door open wheater map
-    Route::get('/weather', [WidgetsApiController::class, 'weatherCityCheck']);
-    Route::get('/weatherwidget/{cityId}', [WidgetsApiController::class, 'CheckCity']);
+    Route::get('/weather', [WeatherApiController::class, 'weatherCityCheck']);
 
     // haalt een spesefieke widget op op basis van de type
     Route::get('/widgets/getSpesificWidget', [WidgetsApiController::class, 'getSpesificWidget']);
