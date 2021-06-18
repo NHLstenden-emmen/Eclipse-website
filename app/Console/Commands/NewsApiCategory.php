@@ -13,7 +13,7 @@ class NewsApiCategory extends Command
      *
      * @var string
      */
-    protected $signature = 'NewsApi:category {category}';
+    protected $signature = 'categoryNews:api {category}';
 
     /**
      * The console command description.
@@ -55,7 +55,10 @@ class NewsApiCategory extends Command
             $title4 = $response['articles'][3]['title'];
             $title5 = $response['articles'][4]['title'];
         
-            Widgets::query()->updateOrCreate(['type' => 'news:'.$this->argument('category')], 
+            Widgets::query()->updateOrCreate(
+            ['type' => 'news_'.$this->argument('category')], 
+            ['display_name' => $this->argument('category').' news'], 
+            
             ['recentdata' => "
             Title 1: ".$title1.";
             Title 2: ".$title2.";

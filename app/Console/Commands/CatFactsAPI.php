@@ -13,7 +13,7 @@ class CatFactsAPI extends Command
      *
      * @var string
      */
-    protected $signature = 'RandomCat:facts';
+    protected $signature = 'catFacts:api';
 
     /**
      * The console command description.
@@ -47,6 +47,9 @@ class CatFactsAPI extends Command
         
         $fact = $response['fact'];
 
-        Widgets::query()->updateOrCreate(['type' => 'catfact'], ['recentdata' => $fact]);
+        Widgets::query()->updateOrCreate(
+            ['type' => 'catfact'],
+            ['display_name' => 'cat fact'], 
+            ['recentdata' => $fact]);
     }
 }

@@ -17,6 +17,7 @@ class Widgets extends Migration
             $table->id('id');
             $table->string('type')->unique();
             $table->string('params')->nullable();
+            $table->string('display_name')->nullable();
             $table->text('recentdata')->nullable();
             $table->timestamps();
         });

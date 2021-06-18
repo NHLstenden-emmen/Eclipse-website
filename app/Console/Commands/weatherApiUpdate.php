@@ -6,14 +6,14 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use App\Models\weatherApi;
 
-class weatherApiUpdate extends Command
+class WeatherApiUpdate extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'weather:Update {CityID}';
+    protected $signature = 'spesificWeather:api {CityID}';
 
     /**
      * The console command description.

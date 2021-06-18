@@ -13,7 +13,7 @@ class NewsApi extends Command
      *
      * @var string
      */
-    protected $signature = 'NewsApi:Topnews';
+    protected $signature = 'TopNews:api';
 
     /**
      * The console command description.
@@ -55,7 +55,9 @@ class NewsApi extends Command
             $title4 = $response['articles'][3]['title'];
             $title5 = $response['articles'][4]['title'];
         
-            Widgets::query()->updateOrCreate(['type' => 'news'], 
+            Widgets::query()->updateOrCreate(
+            ['type' => 'news'], 
+            ['display_name' => 'news top headlines'], 
             ['recentdata' => "
             Title 1: ".$title1.";
             Title 2: ".$title2.";

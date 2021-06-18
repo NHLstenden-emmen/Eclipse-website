@@ -6,14 +6,14 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use App\Models\Widgets;
 
-class GeekJokesApi extends Command
+class JokeOfTheDay extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'geekJokes:api';
+    protected $signature = 'jokeOfTheDay:api';
 
     /**
      * The console command description.
@@ -39,11 +39,16 @@ class GeekJokesApi extends Command
      */
     public function handle()
     {
-        $response = Http::get('https://geek-jokes.sameerkumar.website/api');
+        $response = Http::accept('application/json')->get('https://icanhazdadjoke.com');
         
-        Widgets::query()->updateOrCreate(
-            ['type' => 'geek_jokes'],
-            ['display_name' => 'geek jokes'], 
-            ['recentdata' => $response]);
+        $response = $response->json();
+        if($response['status'] === 200){
+            $joke = $response['joke'];
+            Widgets::query()->updateOrCreate(
+                ['type' => 'joke_of_the_day'], 
+                ['display_name' => 'Joke of the day'], 
+                ['recentdata' => $joke]
+            );
+        }
     }
 }
