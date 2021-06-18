@@ -20,7 +20,7 @@ class yoMamaJokeApi extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'yo mama jokes';
 
     /**
      * Create a new command instance.

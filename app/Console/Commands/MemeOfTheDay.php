@@ -20,7 +20,7 @@ class MemeOfTheDay extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'api for the daily memes';
 
     /**
      * Create a new command instance.

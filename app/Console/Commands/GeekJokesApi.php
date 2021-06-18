@@ -20,7 +20,7 @@ class GeekJokesApi extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'jokes for for geeks';
 
     /**
      * Create a new command instance.

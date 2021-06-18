@@ -20,7 +20,7 @@ class JokeOfTheDay extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Api for the daily jokes';
 
     /**
      * Create a new command instance.
