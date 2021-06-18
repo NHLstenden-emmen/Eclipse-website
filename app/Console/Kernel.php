@@ -25,8 +25,15 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('RandomCat:facts')->everyThirtyMinutes()->withoutOverlapping();
-        $schedule->command('NewsApi:Update')->everyThirtyMinutes()->withoutOverlapping();
-        $schedule->command('NewsApi:Update')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('NewsApi:Topnews')->everyThirtyMinutes()->withoutOverlapping();
+
+        $schedule->command('NewsApi:category business')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('NewsApi:category entertainment')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('NewsApi:category general')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('NewsApi:category health')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('NewsApi:category science')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('NewsApi:category sports')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('NewsApi:category technology')->everyThirtyMinutes()->withoutOverlapping();
         
         $schedule->command('Weather:Update 2756136')->everyThirtyMinutes()->withoutOverlapping();
         $schedule->command('Weather:Update 2755249')->everyThirtyMinutes()->withoutOverlapping();

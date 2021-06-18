@@ -6,21 +6,21 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use App\Models\Widgets;
 
-class NewsApi extends Command
+class NewsApiCategory extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'NewsApi:Topnews';
+    protected $signature = 'NewsApi:category {category}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Update top News api data';
+    protected $description = 'Update specific news news data';
 
     /**
      * Create a new command instance.
@@ -39,12 +39,12 @@ class NewsApi extends Command
      */
     public function handle()
     {
-        
         $apiKey = env('NEWS_API_KEY');
 
         $response = Http::get('https://newsapi.org/v2/top-headlines', [
             'apiKey' => $apiKey,
-            'sources' => 'bbc-news'
+            'category' => $this->argument('category'),
+            'language' => 'en'
         ]);
         
         $response = $response->json();
@@ -55,7 +55,7 @@ class NewsApi extends Command
             $title4 = $response['articles'][3]['title'];
             $title5 = $response['articles'][4]['title'];
         
-            Widgets::query()->updateOrCreate(['type' => 'news'], 
+            Widgets::query()->updateOrCreate(['type' => 'news:'.$this->argument('category')], 
             ['recentdata' => "
             Title 1: ".$title1.";
             Title 2: ".$title2.";

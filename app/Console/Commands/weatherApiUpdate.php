@@ -3,7 +3,6 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use App\Models\weatherApi;
 
@@ -57,8 +56,7 @@ class weatherApiUpdate extends Command
         $location = $response['name'];
 
         weatherApi::query()->updateOrCreate(['cityID' => $this->argument('CityID')], 
-        ['recentdata' => "
-            main: ".$weather.' ,
+        ['recentdata' => "main: ".$weather.' ,
             icon: '.$icon.' ,
             temp: '.$temp.' ,
             location: '.$location.' ,
