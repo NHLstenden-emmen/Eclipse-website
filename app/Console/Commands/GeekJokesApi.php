@@ -42,8 +42,7 @@ class GeekJokesApi extends Command
         $response = Http::get('https://geek-jokes.sameerkumar.website/api');
         
         Widgets::query()->updateOrCreate(
-            ['type' => 'geek_jokes'],
-            ['display_name' => 'geek jokes'], 
+            ['type' => 'geek_jokes', 'display_name' => 'geek jokes'], 
             ['recentdata' => $response]);
     }
 }

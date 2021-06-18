@@ -56,8 +56,7 @@ class NewsApi extends Command
             $title5 = $response['articles'][4]['title'];
         
             Widgets::query()->updateOrCreate(
-            ['type' => 'news'], 
-            ['display_name' => 'news top headlines'], 
+            ['type' => 'news', 'display_name' => 'news top headlines'], 
             ['recentdata' => "
             Title 1: ".$title1.";
             Title 2: ".$title2.";

@@ -45,8 +45,7 @@ class JokeOfTheDay extends Command
         if($response['status'] === 200){
             $joke = $response['joke'];
             Widgets::query()->updateOrCreate(
-                ['type' => 'joke_of_the_day'], 
-                ['display_name' => 'Joke of the day'], 
+                ['type' => 'joke_of_the_day','display_name' => 'test'], 
                 ['recentdata' => $joke]
             );
         }

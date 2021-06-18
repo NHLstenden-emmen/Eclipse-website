@@ -44,8 +44,7 @@ class yoMamaJokeApi extends Command
         $response = $response->json();
         $joke = $response['joke'];
         Widgets::query()->updateOrCreate(
-            ['type' => 'yo_mama_jokes'], 
-            ['display_name' => 'yo mama joke'], 
+            ['type' => 'yo_mama_jokes', 'display_name' => 'yo mama joke'], 
             ['recentdata' => $joke]);
     }
 }

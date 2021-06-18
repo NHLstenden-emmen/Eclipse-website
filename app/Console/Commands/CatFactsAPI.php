@@ -48,8 +48,7 @@ class CatFactsAPI extends Command
         $fact = $response['fact'];
 
         Widgets::query()->updateOrCreate(
-            ['type' => 'catfact'],
-            ['display_name' => 'cat fact'], 
+            ['type' => 'catfact', 'display_name' => 'cat fact'], 
             ['recentdata' => $fact]);
     }
 }

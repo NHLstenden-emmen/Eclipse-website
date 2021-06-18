@@ -56,8 +56,7 @@ class NewsApiCategory extends Command
             $title5 = $response['articles'][4]['title'];
         
             Widgets::query()->updateOrCreate(
-            ['type' => 'news_'.$this->argument('category')], 
-            ['display_name' => $this->argument('category').' news'], 
+            ['type' => 'news_'.$this->argument('category'), 'display_name' => $this->argument('category').' news'], 
             
             ['recentdata' => "
             Title 1: ".$title1.";

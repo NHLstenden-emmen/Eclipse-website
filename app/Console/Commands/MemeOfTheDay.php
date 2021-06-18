@@ -47,8 +47,7 @@ class MemeOfTheDay extends Command
             $image = $response['data'][0]['image'];
             $top_text = $response['data'][0]['topText'];
             Widgets::query()->updateOrCreate(
-                ['type' => 'meme_of_the_day'], 
-                ['display_name' => 'meme of the day'], 
+                ['type' => 'meme_of_the_day', 'display_name' => 'meme of the day'], 
                 ['recentdata' => "bottom_text: ".$bottom_text."; image: ".$image."; top_text: ".$top_text.";"]
             );
         }
