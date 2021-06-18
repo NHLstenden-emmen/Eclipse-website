@@ -26,6 +26,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('RandomCat:facts')->everyThirtyMinutes()->withoutOverlapping();
         $schedule->command('NewsApi:Topnews')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('Geek:Jokes')->everyFiveMinutes()->withoutOverlapping();
 
         $schedule->command('NewsApi:category business')->everyThirtyMinutes()->withoutOverlapping();
         $schedule->command('NewsApi:category entertainment')->everyThirtyMinutes()->withoutOverlapping();
