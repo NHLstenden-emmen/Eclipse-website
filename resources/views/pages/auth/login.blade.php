@@ -33,7 +33,7 @@
                                 <div class="form-group mb-3">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" name="remember"> Remember Me
+                                            <input type="checkbox" name="remember_me" value="1"> Remember Me
                                         </label>
                                     </div>
                                 </div>

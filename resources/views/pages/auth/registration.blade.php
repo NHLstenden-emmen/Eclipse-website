@@ -39,11 +39,13 @@
                                     <span class="text-danger">{{ $errors->first('password') }}</span>
                                     @endif
                                 </div>
-
+                                
                                 <div class="form-group mb-3">
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="remember"> Remember Me</label>
-                                    </div>
+                                    <input type="password" placeholder="Password confirmation" id="password_confirmation" class="form-control"
+                                        name="password_confirmation" required>
+                                    @if ($errors->has('password_confirmation'))
+                                    <span class="text-danger">{{ $errors->first('password_confirmation') }}</span>
+                                    @endif
                                 </div>
 
                                 <div class="d-grid mx-auto">
@@ -51,7 +53,7 @@
                                 </div>
                             </form>
                             <p style="text-align: center;" class="registerUserButton">
-                                If you allready have a account login 
+                                If you already have a account login 
                                 <a href="login">Here.
                             </a></p>
 

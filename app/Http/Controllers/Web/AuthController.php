@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterRequest;
 
 class AuthController extends WebController
 {
@@ -16,20 +18,25 @@ class AuthController extends WebController
     }  
         
 
-    public function customLogin(Request $request)
+    public function customLogin(LoginRequest $request)
     {
-        $request->validate([
-            'email' => 'required',
-            'password' => 'required',
+        $credential = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+        
+        $remember_me  = ( !empty( $request->remember_me ) )? TRUE : FALSE;
+        
+        if(Auth::attempt($credential)){
+            $user = User::where(["email" => $credential['email']])->first();
+            
+            Auth::login($user, $remember_me);
+        
+            return redirect()->intended('dashboard')->withSuccess('Signed in');
+        } 
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
         ]);
-
-        $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
-                        ->withSuccess('Signed in');
-        }
-
-        return redirect("login")->withSuccess('Login details are not valid');
     }
 
     public function registration()
@@ -38,16 +45,20 @@ class AuthController extends WebController
     }
         
 
-    public function customRegistration(Request $request)
-    {  
+    public function customRegistration(request $request)
+    {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
+            'name' => 'required|string',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:6|confirmed'
         ]);
-            
-        $data = $request->all();
-        $check = $this->create($data);
+
+        $credential = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+        $check = $this->create($credential);
             
         return redirect("dashboard")->withSuccess('You have signed-in');
     }
