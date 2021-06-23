@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\GuestPageController;
 use App\Http\Controllers\Web\AuthController;
 use App\Http\Controllers\Web\AdminController;
-use App\Http\Controllers\Web\QRController;
 
 
 /*

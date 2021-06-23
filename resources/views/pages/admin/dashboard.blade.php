@@ -16,11 +16,7 @@
                                     <a href=""> here the app.</a>
                                 </p>
                             </div>
-                            <div class="visible-print text-center">
-                                <h1> Or scann the qr code to download the apk </h1>
-                                
-                                {!! QrCode::size(250)->generate('github.com/nhlstenden-emmen'); !!}
-                            </div>
+                            
                         </div>
                         <div class="card-footer">
                             <a class="specialButton" href="{{ route('signout') }}">Logout</a>
