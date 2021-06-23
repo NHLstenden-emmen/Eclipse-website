@@ -51,7 +51,7 @@ class WeatherApiUpdate extends Command
 
         $temp = $response['main']['temp'];
 
-        $icon = $response['weather'][0]['icon'];
+        $icon = $response['weather'][0]['id'];
         $weather = $response['weather'][0]['main'];
         $location = $response['name'];
 
