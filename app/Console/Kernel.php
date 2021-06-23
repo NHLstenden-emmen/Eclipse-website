@@ -40,7 +40,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('categoryNews:api technology')->everyThirtyMinutes()->withoutOverlapping();
         
         $schedule->command('spesificWeather:api 2756136')->everyThirtyMinutes()->withoutOverlapping();
-        $schedule->command('spesificWeather:api 2755249')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('spesificWeather:api 2755251')->everyThirtyMinutes()->withoutOverlapping();
     }
 
     /**
