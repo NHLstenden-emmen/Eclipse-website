@@ -23,7 +23,9 @@ class UserSettingsApiController extends ApiController
     {
         $user_settings = user_settings::find($request->input('id'));
         
-        $success = $user_settings->update($request->input('widget_settings'));
+        $success = $user_settings->update(
+            $request->input('widget_settings')
+    );
 	
         return ([
             'success' => $success
