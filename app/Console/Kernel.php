@@ -27,20 +27,19 @@ class Kernel extends ConsoleKernel
         $schedule->command('jokeOfTheDay:api')->daily()->withoutOverlapping();
         $schedule->command('memeOfTheDay:api')->daily()->withoutOverlapping();
         
-        $schedule->command('catFacts:api')->everyThirtyMinutes()->withoutOverlapping();
-        $schedule->command('TopNews:api')->everyThirtyMinutes()->withoutOverlapping();
-        $schedule->command('geekJokes:api')->everyFiveMinutes()->withoutOverlapping();
+        $schedule->command('catFacts:api')->everyFifteenMinutes()->withoutOverlapping();
+        $schedule->command('TopNews:api')->everyFifteenMinutes()->withoutOverlapping();
 
-        $schedule->command('categoryNews:api business')->everyThirtyMinutes()->withoutOverlapping();
-        $schedule->command('categoryNews:api entertainment')->everyThirtyMinutes()->withoutOverlapping();
-        $schedule->command('categoryNews:api general')->everyThirtyMinutes()->withoutOverlapping();
-        $schedule->command('categoryNews:api health')->everyThirtyMinutes()->withoutOverlapping();
-        $schedule->command('categoryNews:api science')->everyThirtyMinutes()->withoutOverlapping();
-        $schedule->command('categoryNews:api sports')->everyThirtyMinutes()->withoutOverlapping();
-        $schedule->command('categoryNews:api technology')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('categoryNews:api business')->everyFifteenMinutes()->withoutOverlapping();
+        $schedule->command('categoryNews:api entertainment')->everyFifteenMinutes()->withoutOverlapping();
+        $schedule->command('categoryNews:api general')->everyFifteenMinutes()->withoutOverlapping();
+        $schedule->command('categoryNews:api health')->everyFifteenMinutes()->withoutOverlapping();
+        $schedule->command('categoryNews:api science')->everyFifteenMinutes()->withoutOverlapping();
+        $schedule->command('categoryNews:api sports')->everyFifteenMinutes()->withoutOverlapping();
+        $schedule->command('categoryNews:api technology')->everyFifteenMinutes()->withoutOverlapping();
         
-        $schedule->command('spesificWeather:api 2756136')->everyThirtyMinutes()->withoutOverlapping();
-        $schedule->command('spesificWeather:api 2755251')->everyThirtyMinutes()->withoutOverlapping();
+        $schedule->command('spesificWeather:api 2756136')->everyFifteenMinutes()->withoutOverlapping();
+        $schedule->command('spesificWeather:api 2755251')->everyFifteenMinutes()->withoutOverlapping();
     }
 
     /**
