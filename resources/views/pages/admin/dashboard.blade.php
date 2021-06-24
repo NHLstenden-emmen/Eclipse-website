@@ -15,6 +15,7 @@
                                 <p>your account works Download
                                     <a href=""> here the app.</a>
                                 </p>
+                                <img src="img/qrcode.png" class="qrcode" alt="QR code for the app">
                             </div>
                             
                         </div>

@@ -382,3 +382,10 @@ nav .nav-link{
 		margin-right: auto;
 	}
 }
+.qrcode{
+    height: 200px;
+}
+.card-footer{
+    text-align: center;
+
+}
