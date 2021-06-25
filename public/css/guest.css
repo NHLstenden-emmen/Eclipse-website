@@ -383,9 +383,9 @@ nav .nav-link{
 	}
 }
 .qrcode{
-    height: 200px;
+    width: 90%;
+    max-width: 300px;
 }
 .card-footer{
     text-align: center;
-
 }

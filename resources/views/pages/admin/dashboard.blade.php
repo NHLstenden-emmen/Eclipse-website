@@ -6,7 +6,7 @@
         <div class="cotainer">
             <div class="row justify-content-center">
                 <div class="col-md-4">
-                    <div class="card" style="margin-top: 50%;">
+                    <div class="card" style="margin-top: 20%;">
                         <a href="/" class="singInUpLogo">
                             <img src="img/logo/bigLogo.png" alt="Eclipse Logo">
                         </a>
