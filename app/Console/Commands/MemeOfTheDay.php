@@ -39,17 +39,16 @@ class MemeOfTheDay extends Command
      */
     public function handle()
     {
-        $response = Http::accept('application/json')->get('http://alpha-meme-maker.herokuapp.com');
+        $response = Http::accept('application/json')->get('https://meme-api.herokuapp.com/gimme/wholesomememes');
 
         $response = $response->json();
-        if($response['code'] === 200){
-            $bottom_text = $response['data'][0]['bottomText'];
-            $image = $response['data'][0]['image'];
-            $top_text = $response['data'][0]['topText'];
-            Widgets::query()->updateOrCreate(
-                ['type' => 'meme_of_the_day', 'display_name' => 'meme of the day'], 
-                ['recentdata' => "bottom_text: ".$bottom_text."; image: ".$image."; top_text: ".$top_text.";"]
-            );
-        }
+        $bottom_text = $response['title'];
+        $image = $response['url'];
+        $top_text = 'hoi';
+        Widgets::query()->updateOrCreate(
+            ['type' => 'meme_of_the_day', 'display_name' => 'meme of the day'], 
+            ['recentdata' => "bottom_text: ".$bottom_text."; image: ".$image."; top_text: ".$top_text.";"]
+        );
     }
 }
+//https://github.com/D3vd/Meme_Api
